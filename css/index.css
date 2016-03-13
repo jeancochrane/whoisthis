@@ -1,0 +1,144 @@
+.responsetext {
+    text-align: left;
+    font-weight: lighter;
+    white-space: normal;
+	width: 40%;
+	float: left;
+}
+
+.msgtext {
+	text-align: right;
+	font-weight: lighter;
+	white-space: normal;
+	width: 40%;
+	float: right;
+}
+
+.lastmsg {
+	color: #aaaaaa;
+	display: inline;
+	font-family: helvetica, arial, sans-serif;
+	font-weight: lighter;
+}
+
+.note_preview {
+	color: gray;
+}
+
+.fullpage {
+	bottom:0;
+    left:0;
+    position:fixed;
+    right:0;
+    top:0;
+    z-index:100000;
+}
+.overlaypage {
+	background:#000000;
+    opacity:.6
+}
+
+.divcenter {
+	display: table; 
+	margin: 0 auto;
+}
+
+.ui-nosvg .ui-icon-greencheck:after {
+	background-image: url('images/greencheck.png');
+    background-size: 18px 18px;
+}
+
+.ui-nosvg .ui-icon-redx:after {
+	background-image:url('images/redx.png');
+	background-size: 18px 18px;
+}
+
+.ui-nosvg .ui-icon-unlocked:after {
+    background-image: url("images/unlocked.png");
+    background-size: 18px 18px;
+}
+
+.ui-nosvg .ui-icon-locked:after {
+    background-image: url("images/padlock.png");
+    background-size: 18px 18px;
+}
+
+#msg_list .ui-li-static.response {
+	border-width: 0px;	
+	background-color: rgb(248, 230, 232);
+}
+
+#msg_list .ui-li-static.msg {
+	border-width: 0px;
+	background-color: rgb(230, 232, 248);
+}
+
+@media screen {
+	#home_svg {
+		max-height: 90%;
+		margin-top: 1%;
+	}
+	#home_apps {
+		max-height: 100%;
+	}
+	#home {
+		max-height: 100%;
+	}
+}
+
+.ui-page { 
+	-webkit-backface-visibility: hidden; 
+}
+
+body{
+   background: linear-gradient(rgb(149,243,255), rgb(236,138,255));
+}
+
+div.email {
+	border-width: 2px;
+}
+
+#mail_list li a h1, 
+#mail_list li a p {
+	font-weight: normal;
+}
+
+#mail_list li a.unread-mail, 
+#mail_list li a.unread-mail p,
+#mail_list li a.unread-mail h1 {
+	background-color: rgb(230, 230, 230);
+	font-weight: bold;
+}
+
+#mail_list li a.unread-mail:hover,
+#mail_list li a.unread-mail:hover p, 
+#mail_list li a.unread-mail:hover h1 {
+	background-color: rgb(220, 220, 220);
+}
+
+#mail_list li a p.mail_subject {
+	font-size: 14px;
+}
+
+#mail_list li a p.mail_textpreview {
+	color: gray;
+}
+
+#home_header img {
+	filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+
+#home.ui-page {
+   background: linear-gradient(rgb(149,243,255), rgb(236,138,255));
+}
+
+#home_header.ui-header {
+	height: 20px;
+	border-style: solid none solid none;
+	border-color: rgb(190,190,190) white rgb(100,100,100) white;
+	background: linear-gradient(rgba(100, 100, 100, 0.8), rgba(128,128, 128, 0.8));
+	color: white;
+	text-shadow: none;
+	font-weight: normal;
+}
