@@ -43,26 +43,6 @@
 	margin: 0 auto;
 }
 
-.ui-nosvg .ui-icon-greencheck:after {
-	background-image: url('images/greencheck.png');
-    background-size: 18px 18px;
-}
-
-.ui-nosvg .ui-icon-redx:after {
-	background-image:url('images/redx.png');
-	background-size: 18px 18px;
-}
-
-.ui-nosvg .ui-icon-unlocked:after {
-    background-image: url("images/unlocked.png");
-    background-size: 18px 18px;
-}
-
-.ui-nosvg .ui-icon-locked:after {
-    background-image: url("images/padlock.png");
-    background-size: 18px 18px;
-}
-
 #msg_list .ui-li-static.response {
 	border-width: 0px;	
 	background-color: rgb(248, 230, 232);
@@ -147,6 +127,7 @@ div.email {
 	color: white;
 	text-shadow: none;
 	font-weight: normal;
+	text-align: center;
 }
 
 #left_header {
@@ -162,6 +143,7 @@ div.email {
 	vertical-align: bottom;
 	filter: invert(100%);
     -webkit-filter: invert(100%);
+    float: left;
 }
 
 #battery {
@@ -172,4 +154,16 @@ div.email {
 
 svg a:hover {
 	opacity: 0.9;
+}
+
+#header_time {
+	display: inline-block;
+}
+
+#header_time .blink {
+  -webkit-animation: blinker 2s linear infinite;
+}
+
+@-webkit-keyframes blinker {  
+  50% { opacity: 0.0; }
 }
