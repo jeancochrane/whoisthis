@@ -73,15 +73,26 @@
 	background-color: rgb(230, 232, 248);
 }
 
-@media screen {
-	#home_svg {
+
+#home_svg {
 		max-height: 90%;
+		min-height: 90%;
 		margin-top: 1%;
+		/* the following code centers the SVG
+		within the div. i have no idea why lol.
+		total kludge copied from stackoverflow. */
+		position: relative;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		transform: translateX(-50%);
 	}
-	#home_apps {
+	
+#home_apps {
 		max-height: 100%;
 	}
-	#home {
+	
+#home {
 		max-height: 100%;
 	}
 }
@@ -124,11 +135,6 @@ div.email {
 	color: gray;
 }
 
-#home_header img {
-	filter: invert(100%);
-    -webkit-filter: invert(100%);
-}
-
 #home.ui-page {
    background: linear-gradient(rgb(149,243,255), rgb(236,138,255));
 }
@@ -137,8 +143,34 @@ div.email {
 	height: 20px;
 	border-style: solid none solid none;
 	border-color: rgb(190,190,190) white rgb(100,100,100) white;
-	background: linear-gradient(rgba(100, 100, 100, 0.8), rgba(128,128, 128, 0.8));
+	background: linear-gradient(rgba(128,128, 128, 0.8), rgba(100, 100, 100, 0.8));
 	color: white;
 	text-shadow: none;
 	font-weight: normal;
 }
+
+#left_header {
+	float: left;
+}
+
+#right_header {
+	float: right;
+}
+
+#noservice {
+	max-height: 20px;
+	vertical-align: bottom;
+	filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+
+#battery {
+	max-height: 20px;
+	vertical-align: bottom;
+	color: white;
+}
+
+svg a:hover {
+	opacity: 0.9;
+}
+

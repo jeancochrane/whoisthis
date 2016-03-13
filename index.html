@@ -24,18 +24,20 @@
 	<script src="js/records.js"></script>
   <script src="js/narrative.js"></script>
 
-
-	<title>whois.this()</title>
+	<title>whois.this(?)</title>
 </head>
 
 <body id="document_body">
 
 <div data-role="page" id="home">
   <div id="home_header" data-role="header">
-    <div style="float: right;">[Battery] 99%&nbsp;</div>
-    <div style="float: left;">&nbsp;No Service&nbsp;</div>
-    <!--div><img src="https://cdn3.iconfinder.com/data/icons/can-you-hear-me-now/100/close-connection-512.png" alt="" style="height: 20px;"/></div-->
-    <div style="width: 36px; margin-left: auto; margin-right: auto;">Time</div>
+    <div id="right_header">
+      <img id="battery" src="css/images/battery_full.png"/>
+      99%&nbsp;
+    </div>
+    <div id="left_header">&nbsp;No Service&nbsp;</div>
+    <img id="noservice" src="https://cdn3.iconfinder.com/data/icons/can-you-hear-me-now/100/close-connection-512.png" alt="">
+    
   </div>
   
   <div id="mailoverlay" class="fullpage" style="background-color:white">
@@ -176,22 +178,35 @@
       <stop offset="0.18867" stop-color="#fff"/>
       <stop offset="1" stop-color="#8c6b87"/>
     </linearGradient>
+    <filter id="shadow" width="150%" height="180%" x="-25%" y="-40%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="blur"/>
+      <feColorMatrix result="bluralpha" in="blur" type="matrix" values=
+            "1 0 0 0   0
+             0 1 0 0   0
+             0 0 1 0   0
+             0 0 0 0.4 0 "/>
+     <feOffset in="bluralpha" dx="3" dy="3" result="offsetBlur"/>
+      <feMerge>
+        <feMergeNode in="offsetBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
     </defs>
     <title>apps_max</title>
     <a xlink:href="#notifications" class="link2notis" data-navigate="#notifications">
-    <polygon class="cls-1" points="395.042 217.18 454.594 114.033 573.699 114.033 633.251 217.18 573.699 320.328 454.594 320.328 395.042 217.18"/>
+    <polygon class="cls-1" filter="url(#shadow)" points="395.042 217.18 454.594 114.033 573.699 114.033 633.251 217.18 573.699 320.328 454.594 320.328 395.042 217.18"/>
     <polygon class="cls-2" points="517.38 259.033 476.068 280.752 483.958 234.751 450.537 202.173 496.724 195.462 517.38 153.609 538.035 195.462 584.223 202.173 550.801 234.751 558.691 280.752 517.38 259.033"/>
     <rect class="cls-3" x="564.47995" y="335.76513" width="31.69354" height="10.18943" transform="translate(858.23953 -368.08331) rotate(90)"/>
     <circle class="cls-3" cx="517.37969" cy="240.94015" r="5.09471"/>
     </a>
-    <a xlink:href="#todo" data-navigate="#todo">
-    <polygon class="cls-1" points="199.557 103.148 259.11 0 378.214 0 437.767 103.148 378.214 206.295 259.11 206.295 199.557 103.148"/>
+    <a xlink:href="#todo" class="link2todo" data-navigate="#todo">
+    <polygon class="cls-1" filter="url(#shadow)" points="199.557 103.148 259.11 0 378.214 0 437.767 103.148 378.214 206.295 259.11 206.295 199.557 103.148"/>
     <circle class="cls-4" cx="318.66359" cy="103.14765" r="56.80777"/>
     <rect class="cls-5" x="356.27447" y="232.59706" width="30.33291" height="10.18943" transform="translate(236.16696 -325.93564) rotate(47.94418)"/>
     <rect class="cls-5" x="375.55139" y="223.77283" width="41.56741" height="10.18943" transform="translate(780.97184 4.69679) rotate(137.94418)"/>
     </a>
     <a xlink:href="#contacts" data-navigate="#contacts">
-    <polygon class="cls-1" points="0 217.18 59.552 114.033 178.657 114.033 238.209 217.18 178.657 320.328 59.552 320.328 0 217.18"/>
+    <polygon class="cls-1" filter="url(#shadow)" points="0 217.18 59.552 114.033 178.657 114.033 238.209 217.18 178.657 320.328 59.552 320.328 0 217.18"/>
     <ellipse class="cls-6" cx="85.46265" cy="227.21245" rx="40.75693" ry="36.28361"/>
     <path class="cls-7" d="M256.45062,334.10465c0,12.61068-5.74167,24.0275-15.0247,32.29166a52.13943,52.13943,0,0,1-16.30551,9.78688A56.62356,56.62356,0,0,1,205.1531,379.772a54.47518,54.47518,0,0,1-36.27282-13.37564c-9.283-8.26416-15.0247-19.681-15.0247-32.29166s5.74167-24.0275,15.0247-32.29166a55.87117,55.87117,0,0,1,72.54565,0C250.70895,310.07715,256.45062,321.494,256.45062,334.10465Z" transform="translate(-62.94703 -128.61643)"/>
     <path class="cls-7" d="M225.46813,371.60709a9.60132,9.60132,0,0,0,5.77742-4.61652c1.406,13.52861,14.15785,17.45151,22.1708,25.56278-11.749-5.65331-25.64144-5.614-32.971-18.38125Z" transform="translate(-62.94703 -128.61643)"/>
@@ -201,7 +216,7 @@
     <circle class="cls-3" cx="153.25971" cy="207.02966" r="4.06806"/>
     </a>
     <a xlink:href="#records_nav" data-navigate="#records_nav">
-    <polygon class="cls-1" points="0 443.209 59.552 340.062 178.657 340.062 238.209 443.209 178.657 546.357 59.552 546.357 0 443.209"/>
+    <polygon class="cls-1" filter="url(#shadow)" points="0 443.209 59.552 340.062 178.657 340.062 238.209 443.209 178.657 546.357 59.552 546.357 0 443.209"/>
     <polygon class="cls-8" points="61.74 410.552 111.923 381.579 162.105 410.552 162.105 468.498 111.923 497.471 61.74 468.498 61.74 410.552"/>
     <polygon class="cls-8" points="102.555 449.388 139.512 428.05 176.469 449.388 176.469 492.062 139.512 513.399 102.555 492.062 102.555 449.388"/>
     <polygon class="cls-3" points="160.148 442.118 173.623 450.065 138.169 470.111 122.694 461.165 160.148 442.118"/>
@@ -212,7 +227,7 @@
     <polygon class="cls-3" points="150.501 436.512 133.738 446.512 133.738 442.802 150.501 432.802 150.501 436.512"/>
     </a>
     <a xlink:href="#mail_nav" data-navigate="#mail_nav">
-    <polygon class="cls-1" points="199.557 555.206 259.11 452.058 378.214 452.058 437.767 555.206 378.214 658.353 259.11 658.353 199.557 555.206"/>
+    <polygon class="cls-1" filter="url(#shadow)" points="199.557 555.206 259.11 452.058 378.214 452.058 437.767 555.206 378.214 658.353 259.11 658.353 199.557 555.206"/>
     <rect class="cls-10" x="259.47549" y="534.55121" width="124.00827" height="62.49148"/>
     <polygon class="cls-10" points="321.48 572.051 259.475 572.051 259.475 534.551 321.48 497.051 383.484 534.551 383.484 572.051 321.48 572.051"/>
     <polygon class="cls-11" points="302.777 534.551 383.078 534.551 359.667 548.351 323.478 570.268 293.607 553.663 259.475 534.551 302.777 534.551"/>
@@ -221,13 +236,13 @@
     <polygon class="cls-3" points="321.48 511.403 306.348 525.542 336.612 525.542 321.48 511.403"/>
     </a>
     <a id="" xlink:href="#glitch_app" data-navigate="#glitch_2">
-    <polygon class="cls-1" points="0 669.239 59.552 566.091 178.657 566.091 238.209 669.239 178.657 772.386 59.552 772.386 0 669.239"/>
+    <polygon class="cls-1" filter="url(#shadow)" points="0 669.239 59.552 566.091 178.657 566.091 238.209 669.239 178.657 772.386 59.552 772.386 0 669.239"/>
     <ellipse class="cls-5" cx="141.5825" cy="657.55903" rx="22.45549" ry="23.25691"/>
     <path class="cls-13" d="M248.97241,811.44931a12.61048,12.61048,0,0,0-2.34406.22656c-1.20752-5.004-6.299-8.76208-12.40051-8.76208a13.8358,13.8358,0,0,0-7.738,2.31079c-1.53845-6.553-6.56427-11.36426-12.54193-11.36426-7.20013,0-13.037,6.9718-13.037,15.572a18.4,18.4,0,0,0,.44684,3.98352H178.096v2.74426a10.321,10.321,0,1,0,0,20.22351v0.20923h68.80676V836.4083A12.5658,12.5658,0,1,0,248.97241,811.44931Z" transform="translate(-62.94703 -128.61643)"/>
     <path class="cls-14" d="M192.34546,776.69907a22.86937,22.86937,0,0,0-6.838,1.04028,24.45112,24.45112,0,1,0-48.06787-6.46606,18.13258,18.13258,0,0,0-27.458,15.57837c0,0.24146.02673,0.47583,0.03607,0.715h-0.03607v0.80127a17.087,17.087,0,0,0,0,34.00269v0.0863h82.36389A22.87891,22.87891,0,0,0,192.34546,776.69907Z" transform="translate(-62.94703 -128.61643)"/>
     </a>
     <a xlink:href="#notes_nav" data-navigate="#notes_nav">
-    <polygon class="cls-1" points="395.042 669.239 454.594 566.091 573.699 566.091 633.251 669.239 573.699 772.386 454.594 772.386 395.042 669.239"/>
+    <polygon class="cls-1" filter="url(#shadow)" points="395.042 669.239 454.594 566.091 573.699 566.091 633.251 669.239 573.699 772.386 454.594 772.386 395.042 669.239"/>
     <rect class="cls-15" x="530.98523" y="742.49185" width="92.86304" height="110.72621" transform="translate(-386.46097 271.361) rotate(-30.27865)"/>
     <line class="cls-16" x1="454.46602" y1="658.55502" x2="534.66102" y2="611.73293"/>
     <line class="cls-17" x1="461.76141" y1="671.05027" x2="541.95641" y2="624.22818"/>
@@ -252,7 +267,7 @@
     </a>
     <a xlink:href="#glitch_app" data-navigate="#glitch_1">
     <g>
-    <polygon class="cls-1" points="395.042 443.209 454.594 340.062 573.699 340.062 633.251 443.209 573.699 546.357 454.594 546.357 395.042 443.209"/>
+    <polygon class="cls-1" filter="url(#shadow)" points="395.042 443.209 454.594 340.062 573.699 340.062 633.251 443.209 573.699 546.357 454.594 546.357 395.042 443.209"/>
     <circle class="cls-18" cx="514.14648" cy="446.51151" r="61.44282"/>
     <polygon class="cls-3" points="514.146 421.845 535.509 434.178 535.509 458.845 514.146 471.178 492.784 458.845 492.784 434.178 514.146 421.845"/>
     <circle class="cls-18" cx="514.14648" cy="446.51151" r="7.1094"/>
@@ -266,7 +281,7 @@
     </g>
     </a>
     <a xlink:href="#glitch_app" data-navigate="#glitch_2">
-    <polygon class="cls-1" points="199.557 329.177 259.11 226.029 378.214 226.029 437.767 329.177 378.214 432.324 259.11 432.324 199.557 329.177"/>
+    <polygon class="cls-1" filter="url(#shadow)" points="199.557 329.177 259.11 226.029 378.214 226.029 437.767 329.177 378.214 432.324 259.11 432.324 199.557 329.177"/>
     <circle class="cls-21" cx="318.66186" cy="329.17674" r="59.18638"/>
     <g>
     <path class="cls-22" d="M330.49161,428.17258c1.66757,0.69006,17.79138,7.03455,33.56366-2.5293,15.28592-9.26892,17.44571-25.72107,17.66638-27.66333" transform="translate(-62.94703 -128.61643)"/>
@@ -284,7 +299,7 @@
     </g>
     </a>
     <a xlink:href="#glitch_app" data-navigate="#glitch_2">
-    <polygon class="cls-1" points="199.557 783.271 259.11 680.124 378.214 680.124 437.767 783.271 378.214 886.419 259.11 886.419 199.557 783.271"/>
+    <polygon class="cls-1" filter="url(#shadow)" points="199.557 783.271 259.11 680.124 378.214 680.124 437.767 783.271 378.214 886.419 259.11 886.419 199.557 783.271"/>
     <circle class="cls-23" cx="319.15909" cy="783.27121" r="59.18638"/>
     <circle class="cls-3" cx="319.15909" cy="782.07085" r="26.2003"/>
     <g>

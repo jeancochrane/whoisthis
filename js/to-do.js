@@ -29,12 +29,6 @@ $(document).ready(function() {
 	createNewCompleteTask('45 mins recovery work');
 });
 
-
-function scrollToBottom()
-{
-	$(document).scrollTop(10000000);
-}
-
 function createNewTask(taskText)
 {
 	tasknum = tasknum + 1;
