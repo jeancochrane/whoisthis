@@ -18,13 +18,13 @@ contactsArray = Object.keys(msgsData);
 
 allMsgs = {};
 lastMsgs = {};
-responseBars = {};
+activeResponses = {};
 counterArray = {};
 
 for(var i=0; i < contactsArray.length; i++) {
 	allMsgs[contactsArray[i]] = '';
 	lastMsgs[contactsArray[i]] = '';
-	responseBars[contactsArray[i]] = $([]);
+	activeResponses[contactsArray[i]] = '';
 	counterArray[contactsArray[i]] = 0;
 }
 
@@ -33,8 +33,14 @@ for(var i=0; i < contactsArray.length; i++) {
 $(document).ready(function() {
 
 	$('#msging').on('pageshow', function(){
+		$('#msg_list').listview('refresh');
 		scrollToBottom();
-		$('#msgs_list').listview('refresh');
+	});
+
+	$('#msging').on('pagebeforeshow', function(){
+		$('#msg_list').listview('refresh');
+		scrollToBottom();
+		$('#msg_input').val('');
 	});
 
     $('#contacts_header h2').text('Contacts ('+contactsArray.length.toString()+')') // set up header with number of contacts
@@ -45,10 +51,6 @@ $(document).ready(function() {
     			.appendTo('#contacts_list')
     			.click(setupMessageScreen(contactsArray[i]));
     }
-
-    $errorResponseBar = $('<div>').navbar({
-    	id: 'msg_response_navbar'
-    }).append('<ul id="msg_response_options"><li><a><span style="color:gray;">Error: No responses could be generated.</span></a></li></ul></div>');
     
     $('#sendbtn').click( function(){
     	if ($('#msg_input').val() != '') {
@@ -97,25 +99,7 @@ function receiveMsg(sender) {
 
 	// setting up responses
 
-	var $newResponseBar = $errorResponseBar.clone();
-
-	if (msgResponses.length != 0) {
-
-		$newResponseBar.empty();
-		$newResponseList = $('<ul>');
-
-		for (var i = 0; i < msgResponses.length; i++) 
-		{
-			$('<li><a href="#"><span>'+msgResponses[i]+'</span></a></li>')
-				.click(onMsgResponseClick(msgResponses[i]))
-				.appendTo($newResponseList);
-		}
-
-		$newResponseList.appendTo($newResponseBar);
-	}
-
-	responseBars[sender] = $newResponseBar;
-
+	activeResponses[sender] = msgResponses;
 
 	// trigger a notification
 	
@@ -128,11 +112,9 @@ function receiveMsg(sender) {
 	// make sure everything is styled and displayed correctly
 
 	if (thisPageID == 'msging') { 
-		$('#msg_list').append(newMsgHtml).listview('refresh');
-		$('#msg_footer').children().first().remove();
-		$('#msg_footer').prepend(responseBars[sender]).trigger('create');
-
-	} // if we are already on the messaging screen, print the message immediately and update the responses bar.  otherwise, it will be stored and added to the screen later when we navigate there.
+		setupMessageScreen(sender)();
+		$('#msg_list').listview('refresh');
+	} // if we are already on the messaging screen, set up the messaging screen immediately.  otherwise, wait until the relevant contact is clicked
 
 	scrollToBottom();
 
@@ -140,7 +122,7 @@ function receiveMsg(sender) {
 }
 
 
-function printMsg(contact, messageText, messageTime, isresponse)
+function printMsg(contact, messageText)
 {
 	//Fires when you click the Send button (or press Enter).  Prints what you typed onto the screen.  If the message is "hi", starts countdown to a response.  Then empties the input box and updates the array of messages. 
 	$('#msg_list')
@@ -163,14 +145,33 @@ function printMsg(contact, messageText, messageTime, isresponse)
 function setupMessageScreen(contact){
 	return function(){
 		$('#msg_header h2').text(contact);
-		$('#msg_list').html(allMsgs[contact]).listview('refresh');
-		$('msg_footer').prepend(responseBars[contact]).trigger('create');
+		$('#msg_list').html(allMsgs[contact]);
+		$('#msg_response_navbar').remove();
+		$('<div id="msg_response_navbar" data-role="navbar"><ul id="msg_response_options"></ul></div>').prependTo('#msg_footer');
+
+		if (activeResponses[contact].length==0) {
+			$('#msg_response_options').html('<li><a><span style="color:gray">Error: No responses could be generated</span></a></li>');
+		} else {
+			for (var i = 0; i < activeResponses[contact].length; i++) {
+
+				var response = activeResponses[contact][i];
+
+				$('<li><a><span>'+response+'</span></a></li>')
+					.appendTo('#msg_response_options')
+					.click(onMsgResponseClick(contact,response));
+			}
+		}
+
+		$('#msg_footer').trigger('create');
+
 		scrollToBottom();
 	}
 }
 
-function onMsgResponseClick(response){
+function onMsgResponseClick(contact, response){
 	return function(){
-		$('#msg_input').val(response);
+		printMsg(contact, response);
+		$('#msg_response_options').html('');
+		$('#msg_list').listview('refresh');
 	}
 }

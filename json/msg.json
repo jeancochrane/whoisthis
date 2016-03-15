@@ -88,8 +88,8 @@
 			"responses": ["1","2"]
 		},
 		{
-			"text": "and i guess i hope you have a nice life",
-			"responses": ["1","2"]
+			"time": "",
+			"responses": ["test1","test2"]
 		}
 	]
 }

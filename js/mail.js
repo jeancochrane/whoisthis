@@ -28,7 +28,7 @@ $(document).ready(function() {
 	$('#glitchtext').css({
 		'white-space':'normal',
 		'word-wrap':'break-word'
-	})
+	});
 
 	$('#mail_compose').click(function(){
 		$('#glitchdialog')
@@ -83,7 +83,7 @@ function newMail(sender, n)
 		.slideDown()
 		.children('a')
 		.click(function(){
-			$(this).removeClass('unread-mail');
+			$(this).removeClass('unread-mail'); 
 			$('#mail_title h2').html(mailSender);
 			$('#mail_content').html(mailByThread[threadID]);
 			$('#mail_response_navbar').remove();
@@ -130,7 +130,7 @@ function newMail(sender, n)
 					var response = mailResponses[i];
 					var responseNum = i + 1;
 					var responseid = sender+'-'+n.toString()+'-autoresponse-'+responseNum.toString();
-					$('mail_response_options').html('');
+					$('#mail_response_options').html('');
 					$('<li><a><span id="#autoresponse-'+responseNum.toString()+'">'+response+'</span></a></li>')
 						.appendTo('#mail_response_options')
 						.click(onMailResponseClick(response));
@@ -151,6 +151,6 @@ function newMail(sender, n)
 
 function onMailResponseClick(response){
 	return function(){
-		$('#mail_respond').val(response);
+		
 	}
 }

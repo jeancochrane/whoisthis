@@ -368,11 +368,11 @@
 	<ul data-role="listview" id="msg_list"></ul>
 	
 	<div data-role="footer" data-position="fixed" data-tap-toggle="false" id="msg_footer"> 
-      <input type="text"
-	    	   id="msg_input"
-	    	   placeholder="Send a message!"
-	    	   onkeydown="if (event.keyCode == 13) {$('#sendbtn').click();}"/>
-		<input type="button" id="sendbtn" value="Send"/>
+    <div style="opacity: 0.5; font-size:10px;">Responses generated from aggregate data</div>
+    <input type="text"
+	    	   placeholder="Keyboard not supported"
+           disabled="disabled"/>
+		<input type="button" id="sendbtn" value="Send" disabled="disabled"/>
 		<input type="button" id="msg_receive" value="Receive"/>
 	</div>
 	
@@ -486,8 +486,8 @@
 	</div>
 
 	<div id="mail_view_footer" data-role="footer" data-position="fixed" data-tap-toggle="false" >
-		<div style="color: gray; font-size:10px;">Responses generated from aggregate data</div>
-		<textarea id="mail_respond" placeholder="Send a Reply..."></textarea>
+		<div style="opacity: 0.5; font-size:10px;">Responses generated from aggregate data</div>
+		<textarea id="mail_respond" placeholder="Keyboard not supported" disabled="disabled"></textarea>
 		<input type="button" id="mail_respondbtn" data-icon="forward" value="Send"/>
 	</div>
 	
