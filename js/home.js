@@ -10,7 +10,7 @@ appNameToID =
 allNotifications = 
     [];
 
-openingFadeTime = 1000; 
+openingFadeTime = 1000;
 
 notiCounter = 0;
 notificationsPossible = false;

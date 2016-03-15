@@ -2,24 +2,26 @@
 	"Mom" :
 	{
 		"mom_1_1":
-			{
-				"text": "<p>Hi honey, How are you? I haven't heard from you in a few days.</p> <p>Just checking in to say hi. I love you! Love, Mom</p>",
-				"responses": 
-				{ 
-					"hi mom! good thanks :)" : "mom_1_2", 
-					"miss u </3" : "mom_1_3"
-				},
-			},
-		"mom_1_2" :
-			{
-				"text": "<p>Luv U <3</p>",
-				"responses": { "miss u </3" : "mom_1_3" },
-			},
-		"mom_1_3" : 
-			{
-				"text": "Miss U 2",
-				"responses": {},
+		{
+			"text": "Hi honey, How are you? I haven't heard from you in a few days.//Just checking in to say hi. I love you! Love, Mom",
+			"responses": 
+			{ 
+				"hi mom! good thanks :)" : "mom_1_2", 
+				"miss u </3" : "mom_1_3"
 			}
+		},
+		"mom_1_2" :
+		{
+			"text": "Luv U <3",
+			"responses": 
+			{ 
+				"miss u </3" : "mom_1_3" 
+			}
+		},
+		"mom_1_3" : 
+		{
+			"text": "Miss U 2",
+			"responses": {"":["Mail","New email from FixMyMentals®", "repair_1_0"]}
 		}
 	},
 

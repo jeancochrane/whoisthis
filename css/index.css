@@ -86,7 +86,14 @@ body{
 }
 
 div.email {
-	border-width: 2px;
+	border-bottom-style: dotted;
+	border-bottom-width: 2px;
+	border-top-width:;
+	border-color: gray;
+}
+
+div.email:last-child {
+	border-bottom-style: none;
 }
 
 #mail_list li a h1, 
@@ -166,4 +173,13 @@ svg a:hover {
 
 @-webkit-keyframes blinker {  
   50% { opacity: 0.0; }
+}
+
+div.email:not(:first-child) {
+}
+
+#mail_response_navbar ul a {
+	white-space: normal;
+	height: 40px;
+	line-height: 40px;
 }

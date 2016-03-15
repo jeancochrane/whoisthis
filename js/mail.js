@@ -3,7 +3,7 @@ mailData = (function () {
     $.ajax({
         'async': false,
         'global': false,
-        'url': 'json/email.json',
+        'url': 'json/story.json',
         'dataType': "json",
         'success': function (data) {
             json = data;
@@ -19,6 +19,7 @@ glitchText = 'WŪŊȑ̮Ȓ ͆ǺǮsorr ǳƝ̵ǲɅ ɖ*ͤ͟ǰ ṿ̡ɣȁƠnoʻł ˆ̵
 glitched = false;
 
 mailByThread = {};
+mailActiveResponses = {};
 
 $(document).ready(function() {
 	// SET UP GLITCH DIALOG
@@ -44,23 +45,26 @@ $(document).ready(function() {
 	// SET UP RECEIVE BUTTON
 	
 	$('#mail_receive').click(function(){
-		newMail('fixmymentals', 0);
+		receiveMail('repair_1_0');
 	});
 });
 
-function newMail(sender, n)
+function receiveMail(mailID)
 {	
 	var thisPageID = $.mobile.pageContainer.pagecontainer('getActivePage').attr('id');
 
-	var email = mailData[sender][n];
+	var email = mailData[mailID];
 
-	var mailText = email.text;
+	var mailText = email.body;
 	var mailSender = email.sender;
-	var mailTime = email.time;
+	var mailTime = '';
 	var mailSubject = email.subject;
 	var mailResponses = email.responses;
-	var threadID = mailSubject.replace(/\W/g, '')
+
+	var threadID = mailSubject.replace(/\W/g, '');
 	var newSubject = true;
+
+	mailActiveResponses[threadID] = mailResponses;
 
 	if (Object.keys(mailByThread).indexOf(threadID) >= 0) {
 		newSubject = false
@@ -81,29 +85,8 @@ function newMail(sender, n)
 		.hide()
 		.appendTo('#mail_list')
 		.slideDown()
-		.children('a')
-		.click(function(){
-			$(this).removeClass('unread-mail'); 
-			$('#mail_title h2').html(mailSender);
-			$('#mail_content').html(mailByThread[threadID]);
-			$('#mail_response_navbar').remove();
-			$('<div id="mail_response_navbar" data-role="navbar"><ul id="mail_response_options"></ul></div>').prependTo('#mail_view_footer');
+		.click(setupMailScreen($(this), mailSender, threadID));
 
-			if (mailResponses.length==0) {
-				$('#mail_response_options').html('<li><a><span style="color:gray">Error: No responses could be generated</span></a></li>');
-			} else {
-				for (var i = 0; i < mailResponses.length; i++) {
-					var response = mailResponses[i];
-					var responseNum = i + 1;
-					var responseid = sender+'-'+n.toString()+'-autoresponse-'+responseNum.toString();
-					$('mail_response_options').html('');
-					$('<li><a><span id="#autoresponse-'+responseNum.toString()+'">'+response+'</span></a></li>')
-						.appendTo('#mail_response_options')
-						.click(onMailResponseClick(response));
-				}
-			}
-			$('#mail_view_footer').trigger('create');
-		});
 		if (thisPageID == 'mail_nav') {
 			$('#mail_list').listview('refresh');
 		}
@@ -118,7 +101,9 @@ function newMail(sender, n)
 			$(this).removeClass('unread-mail').children('h1').text(mailSender);
 			$('#mail_title h2').html(mailSender);
 			$('#mail_content').html(mailByThread[threadID]);
-
+			$('div.email:not(:first-child) h2').each(function(){
+				$(this).text('RE: '+$(this).text());
+			});
 			$('#mail_response_navbar').remove();
 			$('<div id="mail_response_navbar" data-role="navbar"><ul id="mail_response_options"></ul></div>').prependTo('#mail_view_footer');
 
@@ -126,10 +111,8 @@ function newMail(sender, n)
 			if (mailResponses.length==0) {
 				$('#mail_response_options').html('<li><a><span style="color:gray">Error: No responses could be generated</span></a></li>');
 			} else {
-				for (var i = 0; i < mailResponses.length; i++) {
-					var response = mailResponses[i];
-					var responseNum = i + 1;
-					var responseid = sender+'-'+n.toString()+'-autoresponse-'+responseNum.toString();
+				for (var i = 0; i < Object.keys(mailResponses).length; i++) {
+					var response = Object.keys(mailResponses)[i];
 					$('#mail_response_options').html('');
 					$('<li><a><span id="#autoresponse-'+responseNum.toString()+'">'+response+'</span></a></li>')
 						.appendTo('#mail_response_options')
@@ -146,6 +129,31 @@ function newMail(sender, n)
 	if ((thisPageID != 'mail_nav') && (thisPageID != 'mail_view') && (notificationsPossible))
 	{
 		getNotification('Mail', 'New mail from '+mailSender, mailTime, true);
+	}
+
+	$('div.email:not(:first-child) h2').text('Re');
+}
+
+function setupMailScreen(element, sender, threadID){
+	return function(){
+		element.removeClass('unread-mail');
+		$('#mail_title h2').html(sender);
+		$('#mail_content').html(mailByThread[threadID]);
+
+		$('#mail_response_navbar').remove();
+		$('<div id="mail_response_navbar" data-role="navbar"><ul id="mail_response_options"></ul></div>').prependTo('#mail_view_footer');
+
+		if (Object.keys(mailActiveResponses[threadID]).length == 0) {
+			$('#mail_response_options').html('<li><a><span style="color:gray">Error: No responses could be generated</span></a></li>');
+		} else {
+			for (var i = 0; i < Object.keys(mailActiveResponses[threadID]).length; i++) {
+				var response = Object.keys(mailActiveResponses[threadID])[i];
+				$('<li><a><span>'+response+'</span></a></li>')
+					.appendTo('#mail_response_options')
+					.click(onMailResponseClick(response));
+			}
+		}
+		$('#mail_view_footer').trigger('create');
 	}
 }
 

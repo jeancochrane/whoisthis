@@ -82,7 +82,7 @@ $(document).ready(function(){
     });
 	}
 
-	for (var i=0;i<3;i++) {
+	/*for (var i=0;i<3;i++) {
 		receiveMsg('Mom');
 		counterArray['Mom'] = i+1;
 	}
@@ -95,5 +95,5 @@ $(document).ready(function(){
 	for (var i=0;i<12;i++) {
 		receiveMsg('Linnea');
 		counterArray['Linnea'] = i+1;
-	}
+	}*/
 });
