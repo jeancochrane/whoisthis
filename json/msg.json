@@ -1,34 +1,37 @@
 {
-	"Mom":
-	[
-		{
-			"text": "Hi honey, How are you? I haven't heard from you in a few days. Just checking in to say hi. I love you! Love, Mom",
-			"time": "",
-			"responses": []
-		},
-		{
-			"text": "Hi there",
-			"time": "10:01AM",
-			"responses": []
-		},
-		{
-			"text": "Miss U",
-			"time": "10:02AM",
-			"responses": ["response1","response2","response3"]
+	"Mom" :
+	{
+		"mom_1_1":
+			{
+				"text": "<p>Hi honey, How are you? I haven't heard from you in a few days.</p> <p>Just checking in to say hi. I love you! Love, Mom</p>",
+				"responses": 
+				{ 
+					"hi mom! good thanks :)" : "mom_1_2", 
+					"miss u </3" : "mom_1_3"
+				},
+			},
+		"mom_1_2" :
+			{
+				"text": "<p>Luv U <3</p>",
+				"responses": { "miss u </3" : "mom_1_3" },
+			},
+		"mom_1_3" : 
+			{
+				"text": "Miss U 2",
+				"responses": {},
+			}
 		}
-	],
+	},
 
 	"Hawthorne":
 	[
 		{
 			"text": "hey buddy! how's it going?",
-			"time": "",
 			"responses": []
 		
 		},
 		{
 			"text": "<span style=\"font-family:menlo;font-size:12px;\">&lt;ERR: PICTURE FAILED TO LOAD&gt;</span>",
-			"time": "",
 			"responses": []
 		}
 		
@@ -38,67 +41,54 @@
 	[
 		{
 			"text": "hey...",
-			"time": "",
 			"responses": []
 		},
 		{
 			"text": "i'm sorry about what happened. your mom told me",
-			"time": "",
 			"responses": []
 		},
 		{
 			"text": "it sounds terrible",
-			"time": "",
 			"responses": []
 		},
 		{
 			"text": "i feel like... i'm responsible or something. you know?",
-			"time": "",
 			"responses": []
 		},
 		{
 			"text": "idk",
-			"time": "",
 			"responses": []
 		},
 		{
 			"text": "are you there?",
-			"time": "",
 			"responses": []
 		},
 		{
 			"text": "aster?",
-			"time": "",
 			"responses": []
 		},
 		{
 			"text": "?",
-			"time": "",
 			"responses": []
 		},
 		{
 			"text": "are you ignoring me?",
-			"time": "",
 			"responses": []
 		},
 		{
 			"text": "that's fine, i won't force you to talk or anything",
-			"time": "",
 			"responses": []
 		},
 		{
 			"text": "i just want you to know that i love you. and i miss you",
-			"time": "",
 			"responses": []
 		},
 		{
 			"text": "and i guess i hope you have a nice life",
-			"time": "",
 			"responses": ["1","2"]
 		},
 		{
 			"text": "and i guess i hope you have a nice life",
-			"time": "",
 			"responses": ["1","2"]
 		}
 	]
