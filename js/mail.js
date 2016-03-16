@@ -39,9 +39,9 @@ $(document).ready(function() {
 
 	// SET UP RECEIVE BUTTON
 	
-	$('#mail_receive').click(function(){
+	/*$('#mail_receive').click(function(){
 		receiveMail('repair_1_0');
-	});
+	});*/
 });
 
 function receiveMail(mailID)

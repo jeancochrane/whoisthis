@@ -1,6 +1,6 @@
 //NARRATIVE 
 openingQs = ['How old are you?','Who is the current president?']
-skipIntro = true;
+skipIntro = false;
 
 $(document).ready(function(){
 	receiveMsg('Linnea', 'linnea_0_0');
