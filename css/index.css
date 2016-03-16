@@ -129,7 +129,7 @@ div.email:last-child {
 
 #home.ui-page {
    background: linear-gradient(rgb(149,243,255), rgb(236,138,255));
-}
+} 
 
 #home_header.ui-header {
 	height: 20px;
@@ -201,3 +201,22 @@ div.email:not(:first-child) {
 	height: 40px;
 	line-height: 40px;
 }
+
+/*
+@media (min-width: 600px) {
+	#home.ui-page {
+  		background: linear-gradient(rgb(149,243,255), rgb(236,138,255));
+  		width: 600px;
+  		height: auto;
+  		max-height: 1000px;
+  		
+  		position: absolute;
+	    top:0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+
+	    margin: auto;
+	    padding: 1px;
+	}
+} */
