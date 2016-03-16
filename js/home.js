@@ -16,16 +16,42 @@ notiCounter = 0;
 notificationsPossible = false;
 
 $(document).ready(function() {
-    
-}); // close $(document).ready()
 
-function getNotification(app, notiText, time, avoidable) {
+    $(document).on('pagecontainerchange', function(e, ui){
+        var activePage = ui.toPage;
+        var fromPage = ui.prevPage;
+        if (activePage.id = 'mail_nav') {
+            $('#mail_list').listview('refresh');
+        }
+        $('[data-role="page"]').css({position : ''});
+    })
+
+    .on('pagecontainerbeforeshow', function(e, ui){
+        var activePage = ui.toPage;
+        var fromPage = ui.prevPage;
+        activePage.find('.ui-listview').listview('refresh');
+    })
+
+    .on('popupafteropen', '[data-role="popup"]', function(event, ui) {
+            $('body').css('overflow', 'hidden').on('touchmove', function(e) {
+                 e.preventDefault();
+            });
+    })
+    
+    .on('popupafterclose', '[data-role="popup"]', function(event, ui){
+            $('body').css('overflow', 'auto').off('touchmove');
+    });
+
+});
+
+function getNotification(app, notiText, avoidable) {
     if (typeof(app)==='undefined') app = 'Messaging';
     if (typeof(notiText)==='undefined') notiText = 'New Message from [sender]';
-    if (typeof(time)==='undefined') time = '10:00AM';
     if (typeof(avoidable)==='undefined') avoidable = true;
 
     var thisPageID = $.mobile.pageContainer.pagecontainer('getActivePage').attr('id');
+
+    $('[data-role="page"]').css({position : ''});
 
 	var $popup = 
 	$('<div/>').popup({
@@ -35,10 +61,12 @@ function getNotification(app, notiText, time, avoidable) {
 		overlayTheme : 'none',
         positionTo : 'origin'
 	}).on('popupafterclose', function(){ //run when the popup closes
+        
         $(this).remove();
 
         $('[data-role="page"]').css({position : ''})
-        if (!avoidable){
+
+        if (!avoidable) {
             $(':mobile-pagecontainer').pagecontainer('change', appNameToID[app], {transition:'pop'});
         }
     });
@@ -107,7 +135,7 @@ function getNotification(app, notiText, time, avoidable) {
         $('#home_svg').hide();
     }*/
    
-    $newNotificationInList = $('<li><a href="'+appNameToID[app]+'""><h1 class="mail_subject">'+notiText+'</h1><p class="mail_time ui-li-aside"><strong>'+time+'</strong></p></a></li>');
+    $newNotificationInList = $('<li><a href="'+appNameToID[app]+'""><h1 class="mail_subject">'+notiText+'</h1></a></li>');
 
     $newNotificationInList.appendTo('#notifications_list');
 
@@ -115,7 +143,7 @@ function getNotification(app, notiText, time, avoidable) {
         $('#notifications_list').listview('refresh');
     }
 
-    notiCounter = notiCounter + 1
+    $('[data-role="page"]').css({position : ''});
 }
 
 function scrollToBottom()

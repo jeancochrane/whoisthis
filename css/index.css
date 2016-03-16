@@ -150,6 +150,13 @@ div.email:last-child {
 	float: right;
 }
 
+div.responsesgenerated {
+	opacity: 0.5; 
+	font-size:12px;
+	padding-top: 1%;
+	padding-left: 1.5%;
+}
+
 #noservice {
 	max-height: 20px;
 	vertical-align: bottom;

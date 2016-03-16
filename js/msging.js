@@ -18,13 +18,13 @@ contactsArray = ['Mom','Hawthorne','Linnea'];
 
 allMsgs = {};
 lastMsgs = {};
-activeResponses = {};
+msgActiveResponses = {};
 counterArray = {};
 
 for(var i=0; i < contactsArray.length; i++) {
 	allMsgs[contactsArray[i]] = '';
 	lastMsgs[contactsArray[i]] = '';
-	activeResponses[contactsArray[i]] = [];
+	msgActiveResponses[contactsArray[i]] = [];
 	counterArray[contactsArray[i]] = 0;
 }
 
@@ -83,8 +83,11 @@ function printMsg(sender, msgArray, msgResponses) {
 
 	var msgText = msgArray.shift();
 
-	if (msgArray.length == 0) {
-		activeResponses[sender] = msgResponses;
+	if (msgArray.length > 0) {
+		msgActiveResponses[sender] = {};
+	}
+	else if (msgArray.length == 0) {
+		msgActiveResponses[sender] = msgResponses;
 	}
 
 	var newMsgHtml = '<li class="response"><div class="responsetext">'+msgText+'</div></li>'; // define new message in html form
@@ -105,13 +108,6 @@ function printMsg(sender, msgArray, msgResponses) {
 		$('#msg_list').html(''); // clear the message screen if we are not on the message screen
 	}
 
-	// trigger a notification
-	
-	if ((thisPageID != 'msging') && (thisPageID != 'contacts') && (notificationsPossible)) 
-	{
-		getNotification('Messaging','New message from '+sender, true, msgTime);
-	}
-
 	// make sure everything is styled and displayed correctly
 
 	if (thisPageID == 'msging') { 
@@ -121,15 +117,36 @@ function printMsg(sender, msgArray, msgResponses) {
 	} // if we are already on the messaging screen, set up the messaging screen immediately.  otherwise, wait until the relevant contact is clicked
 
 	if (msgArray.length > 0) {
+		//run gif until timeout is over
+		var timeout = msgArray[0].length*75;
 		setTimeout(function(){
 			printMsg(sender, msgArray, msgResponses);
-		},1000);
+		},timeout);
+	}
+	else {
+		var response = Object.keys(msgResponses)[0];
+		if (response == 'notification') {
+
+			$('#msg_response_navbar').remove();
+
+			var noti = msgActiveResponses[sender][response];
+			if (noti.type == 'email') {
+				getNotification('Mail', 'New email from '+noti.sender, true);
+				$('[data-role="page"]').css({position : ''});
+				receiveMail(noti.id);
+			}
+			else if (noti.type == 'message') {
+				getNotification('Messaging', 'New message from '+noti.sender, true);
+				$('[data-role="page"]').css({position : ''});
+				receiveMsg(noti.sender, noti.id);
+			}
+		} 
 	}
 }
 
 function sendMsg(contact, messageText)
 {
-	var msgID = activeResponses[contact][messageText];
+	var msgID = msgActiveResponses[contact][messageText];
 	//Fires when you click the Send button (or press Enter).  Prints what you typed onto the screen.  If the message is "hi", starts countdown to a response.  Then empties the input box and updates the array of messages. 
 	$('#msg_list')
 		.append('<li class="msg"><div style="white-space:normal" class="msgtext">'+messageText+'</div></li>')
@@ -157,12 +174,12 @@ function setupMessageScreen(contact){
 		$('#msg_response_navbar').remove();
 		$('<div id="msg_response_navbar" data-role="navbar"><ul id="msg_response_options"></ul></div>').prependTo('#msg_footer');
 
-		if (Object.keys(activeResponses[contact]).length == 0) {
+		if (Object.keys(msgActiveResponses[contact]).length == 0) {
 			$('#msg_response_options').html('<li><a><span style="color:gray">Error: No responses could be generated</span></a></li>');
 		} else {
-			for (var i = 0; i < Object.keys(activeResponses[contact]).length; i++) {
+			for (var i = 0; i < Object.keys(msgActiveResponses[contact]).length; i++) {
 
-				var response = Object.keys(activeResponses[contact])[i];
+				var response = Object.keys(msgActiveResponses[contact])[i];
 
 				$('<li><a><span>'+response+'</span></a></li>')
 					.appendTo('#msg_response_options')

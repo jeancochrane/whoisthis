@@ -61,6 +61,7 @@ function receiveMail(mailID)
 
 	mailActiveResponses[threadID] = mailResponses;
 
+
 	if (Object.keys(mailByThread).indexOf(threadID) >= 0) {
 		newSubject = false
 	}
@@ -74,7 +75,7 @@ function receiveMail(mailID)
 	mailByThread[threadID] = newMailHTML.concat(mailByThread[threadID]);
 
 	if (newSubject) {
-		var newMailListItemHTML = '<li id="'+threadID+'" data-icon="false"><a href="#mail_view" data-transition="slide" class="unread-mail"><h1>'+mailSender+'</h1><p class="mail_subject">'+mailSubject+'</p><p class="mail_textpreview">'+$(mailText).eq(0).text()+'    '+$(mailText).eq(2).text()+'</p><p class="mail_time ui-li-aside">'+mailTime+'</p></a></li>';
+		var newMailListItemHTML = '<li id="'+threadID+'" data-icon="false"><a href="#mail_view" data-transition="slide" class="unread-mail"><h1>'+mailSender+'</h1><p class="mail_subject">'+mailSubject+'</p><p class="mail_textpreview">'+$(mailText).eq(0).text()+' '+$(mailText).eq(1).text()+'</p><p class="mail_time ui-li-aside">'+mailTime+'</p></a></li>';
 
 		$(newMailListItemHTML)
 			.hide()
@@ -93,6 +94,28 @@ function receiveMail(mailID)
 		.children('h1')
 		.text(mailSender+'   ('+($(mailByThread[threadID]).length-1)+')');
 	}
+
+	var noti_check = Object.keys(mailResponses)[0];
+
+	if (noti_check == 'notification') {
+
+		setTimeout(function(){
+			
+			var noti = mailActiveResponses[threadID]['notification'];
+
+			if (noti.type == 'email') {
+				getNotification('Mail', 'New email from '+noti.sender, true);
+				$('[data-role="page"]').css({position : ''});
+				receiveMail(noti.id);
+			}
+			else if (noti.type == 'message') {
+				getNotification('Messaging', 'New message from '+noti.sender, true);
+				$('[data-role="page"]').css({position : ''});
+				receiveMsg(noti.sender, noti.id);
+			}
+
+		},20000);
+	} 
 }
 
 function sendMail (threadID, mailSubject, response){
@@ -109,6 +132,8 @@ function sendMail (threadID, mailSubject, response){
 
 function setupMailScreen(sender, mailSubject, threadID){
 	return function(){
+
+		var responses = Object.keys(mailActiveResponses[threadID]);
 		$('#'+threadID+' a').removeClass('unread-mail');
 		$('#mail_title h2').html(sender);
 		$('#mail_content').html(mailByThread[threadID]);
@@ -116,11 +141,11 @@ function setupMailScreen(sender, mailSubject, threadID){
 		$('#mail_response_navbar').remove();
 		$('<div id="mail_response_navbar" data-role="navbar"><ul id="mail_response_options"></ul></div>').prependTo('#mail_view_footer');
 
-		if (Object.keys(mailActiveResponses[threadID]).length == 0) {
+		if ((responses.length == 0)||(responses[0] == 'notification')) {
 			$('#mail_response_options').html('<li><a><span style="color:gray">Error: No responses could be generated</span></a></li>');
 		} else {
-			for (var i = 0; i < Object.keys(mailActiveResponses[threadID]).length; i++) {
-				var response = Object.keys(mailActiveResponses[threadID])[i];
+			for (var i = 0; i < responses.length; i++) {
+				var response = responses[i];
 				$('<li><a><span>'+response+'</span></a></li>')
 					.appendTo('#mail_response_options')
 					.click(onMailResponseClick(sender, threadID, mailSubject, response));
