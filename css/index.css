@@ -129,7 +129,7 @@ div.email:last-child {
 
 #home.ui-page {
    background: linear-gradient(rgb(149,243,255), rgb(236,138,255));
-}
+} 
 
 #home_header.ui-header {
 	height: 20px;
@@ -198,5 +198,7 @@ div.email:not(:first-child) {
 
 #mail_response_navbar ul a {
 	white-space: normal;
-	vertical-align: center;
+	height: 40px;
+	line-height: 40px;
 }
+
