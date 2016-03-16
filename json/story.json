@@ -3,8 +3,15 @@
 	{
 		"sender" : "FixMyMentals\u00AE",
 		"subject" : "Thank you!",
-		"body" : "<p>Well done! All of your answers were <b>incorrect.</b> Please do not be upset: this was a test to confirm the effective onset of your amnesia. You have experienced an error in your external memory unit and/or your identity matrix, and you have consented to an experimental amnesia-based repair pursuant to form 237B. We are currently trying to locate the error via deep neural network analysis. We have restored your old smartphone so that you may stay in contact with us (and with your loved ones).</p><p>Do not be concerned if any of your apps are out of date with this hardware. We will generate responses from your aggregate communications data for apps that no longer support keyboard functionality. Most other features should work fine. Your device is well-suited for emergencies.</p><p>By the terms of form 237B, you have agreed <b>NOT</b> to read form 237B, nor to pursue your personal data outside of communication with your designated service provider. Sit tight and try to pass the time until we contact you again.<p>Please do not reply to this message,</p><p>FixMyMentals&#174;</p>",
-		"responses" : {}
+		"body" : "<p>Well done! All of your answers were <b>incorrect.</b> Please do not be upset: this was a test to confirm the effective onset of your amnesia. You have experienced an error in your external memory unit and/or your identity matrix, and you have consented to an experimental amnesia-based repair pursuant to <span style='color:darkred'>form 237B</span>. We are currently trying to locate the error via deep neural network analysis. We have restored your old smartphone so that you may stay in contact with us (and with your loved ones).</p><p>Do not be concerned if any of your apps are out of date with this hardware. We will generate responses from your aggregate communications data for apps that no longer support keyboard functionality. Most other features should work fine. Your device is well-suited for emergencies.</p><p>By the terms of <span style='color:darkred'>form 237B</span>, you have agreed <b>NOT</b> to read <span style='color:darkred'>form 237B</span>, nor to pursue your personal data outside of communication with your designated service provider. Sit tight and try to pass the time until we contact you again.<p>Please do not reply to this message,</p><p>FixMyMentals&#174;</p>",
+		"responses" : {
+			"notification" :
+			{
+				"type" : "email",
+				"sender" : "Census Bureau",
+				"id" : "census_0_0"
+			}
+		}
 	},
 
 	"repair_1_0" :
@@ -274,7 +281,14 @@
 		"sender": "Census Bureau",
 		"subject" : "Hey there, fellow citizen!",
 		"body" : "<p>Dear Citizen,</p> <p>Hey there! Census Bureau here. Another busy day of checking facts and counting up our Dear Citizens got us like</p> <img src='http://cdn.makeagif.com/media/3-11-2014/Hdhsw2.gif'> <p>Three! <i>Three</i> lovely citizens!</p> <p>Anyway, enough about us. We noticed that you’ve switched to a smartphone device with a different memory unit, so we were wondering if you could help us out just a tiny bit by updating the <b>Personal Data Request</b> in your Records app. No need to reply to us when it’s done – once our lil’ worker bees sense that the form is all set to go, they’ll send it along to us automatically. Pretty neat, right?</p> <p>We need this information by <b>7PM</b> tonight. So no rush, but yeah – a little bit of a rush! Just go ahead and fill that out as soon as you get a chance and everything will be A-OK.</p> <p>Back to counting,</p> <p>CB</p>",
-		"responses" : {}
+		"responses" : {
+			"notification" :
+			{
+				"type" : "message",
+				"sender" : "Mom",
+				"id" : "mom_1_0"
+			}
+		}
 	},
 
 	"census_2_0" :
@@ -305,7 +319,7 @@
 			{
 				"type" : "email",
 				"sender" : "FixMyMentals\u00AE",
-				"id" : "repair_2_0"
+				"id" : "repair_3_0"
 			}
 		}
 	},
@@ -346,7 +360,7 @@
 
 		"linnea_1_0" : 
 		{
-			"text" : "",
+			"text" : " ",
 			"responses" :
 			{
 				"what happened?" : "linnea_1_7",
@@ -360,8 +374,8 @@
 			"text" : "aster?//um//i'm not sure what to say//it's been a while since i sent that...",
 			"responses" :
 			{
-				"how long has it been?" : "linnea_1_5",
-				"oh, i'm sorry" : "linnea_1_6"
+				"how long has it been?" : "linnea_1_6",
+				"oh, i'm sorry" : "linnea_1_5"
 			}
 		},
 
@@ -1015,7 +1029,12 @@
 			"text": "Hi hun, That's OK. You're going through a tough time right now, it's only normal. Just remember that I always love you. Hugs and kisses. Have you heard from Linnea recently? She has messaged me a few times asking for you and she claims your device isn't getting her messages. Do you know anything about that? Love, Mom", 
 			"responses" : 
 			{
-				"weird, i'll check now" : "linnea_1_0"
+				"notification" : 
+				{
+					"type" : "message",
+					"sender" : "Linnea",
+					"id" : "linnea_1_0"
+				}
 			}
 		},
 
@@ -1024,7 +1043,12 @@
 			"text": "Hi honey, Good thinking. I felt bad when you two stopped talking. You always worked very well together, I thought. OK, I'll stop being embarassing now. I love you. Kisses and hugs. Love, Mom", 
 			"responses" : 
 			{
-				"i love you too, mom" : "linnea_1_0"
+				"notification" : 
+				{
+					"type" : "message",
+					"sender" : "Linnea",
+					"id" : "linnea_1_0"
+				}
 			}
 		},
 

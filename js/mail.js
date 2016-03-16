@@ -79,7 +79,7 @@ function receiveMail(mailID)
 
 		$(newMailListItemHTML)
 			.hide()
-			.appendTo('#mail_list')
+			.prependTo('#mail_list')
 			.slideDown()
 			.click(setupMailScreen(mailSender, mailSubject, threadID));
 
@@ -151,11 +151,28 @@ function setupMailScreen(sender, mailSubject, threadID){
 					.click(onMailResponseClick(sender, threadID, mailSubject, response));
 			}
 		}
-		$('#mail_view_footer').trigger('create');
 
-		$('div.email:not(:last-child) h2').each(function(){
-			$(this).text('RE: '+$(this).text());
+		$('#mail_view_footer').trigger('create');
+		/*
+    	$('#mail_response_options li a').on('ready', function(){
+			var heights = [];
+			$('#mail_response_options li a').each(function(i){
+				heights.push($(this).height());
+			});
+			var biggest = Math.max.apply(Math, heights);
+			console.log(heights);
+			console.log(biggest);
+			$('#mail_response_options li a').each(function(i){
+				$(this).height(biggest);
+			});
+
+			$('div.email:not(:last-child) h2').each(function(){
+				$(this).text('RE: '+$(this).text());
+			});
 		});
+		*/
+
+		$('#mail_response_options li a').trigger('ready');
 	}
 }
 

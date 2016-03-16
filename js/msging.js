@@ -61,7 +61,9 @@ $(document).ready(function() {
 });
 
 
-function receiveMsg(sender, msgID) {
+function receiveMsg(sender, msgID, timeout) {
+
+	if (typeof(timeout)==='undefined') timeout = 3000;
 
 	// initialization / variables
 
@@ -70,11 +72,9 @@ function receiveMsg(sender, msgID) {
 	var msgArray = msgText.split('//');
 	var msgResponses = msg.responses;
 
-	console.log(msgResponses);
-
 	setTimeout(function(){
 		printMsg(sender, msgArray, msgResponses);
-	},3000);
+	},timeout);
 }
 
 function printMsg(sender, msgArray, msgResponses) {
@@ -128,18 +128,17 @@ function printMsg(sender, msgArray, msgResponses) {
 		if (response == 'notification') {
 
 			$('#msg_response_navbar').remove();
-
-			var noti = msgActiveResponses[sender][response];
-			if (noti.type == 'email') {
-				getNotification('Mail', 'New email from '+noti.sender, true);
-				$('[data-role="page"]').css({position : ''});
-				receiveMail(noti.id);
-			}
-			else if (noti.type == 'message') {
-				getNotification('Messaging', 'New message from '+noti.sender, true);
-				$('[data-role="page"]').css({position : ''});
-				receiveMsg(noti.sender, noti.id);
-			}
+			setTimeout(function(){
+				var noti = msgActiveResponses[sender][response];
+				if (noti.type == 'email') {
+					getNotification('Mail', 'New email from '+noti.sender, true);
+					receiveMail(noti.id);
+				}
+				else if (noti.type == 'message') {
+					getNotification('Messaging', 'New message from '+noti.sender, true);
+					receiveMsg(noti.sender, noti.id);
+				}
+			}, 20000);
 		} 
 	}
 }
@@ -174,7 +173,7 @@ function setupMessageScreen(contact){
 		$('#msg_response_navbar').remove();
 		$('<div id="msg_response_navbar" data-role="navbar"><ul id="msg_response_options"></ul></div>').prependTo('#msg_footer');
 
-		if (Object.keys(msgActiveResponses[contact]).length == 0) {
+		if ((Object.keys(msgActiveResponses[contact]).length == 0)||(Object.keys(msgActiveResponses[contact])[0] == 'notification')) {
 			$('#msg_response_options').html('<li><a><span style="color:gray">Error: No responses could be generated</span></a></li>');
 		} else {
 			for (var i = 0; i < Object.keys(msgActiveResponses[contact]).length; i++) {

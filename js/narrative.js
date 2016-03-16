@@ -3,7 +3,7 @@ openingQs = ['How old are you?','Who is the current president?']
 skipIntro = true;
 
 $(document).ready(function(){
-
+	receiveMsg('Linnea', 'linnea_0_0');
 	if (!skipIntro) {
 		$('#mailoverlaydiv').fadeIn(3000, function(){
 			openingQs = ['How old are you?','Who is the current president?']
@@ -45,8 +45,8 @@ $(document).ready(function(){
 				                }); // close second animate callback
 				            }); // close first animate callback
 				        }); // close app click handler
-
-				        newMail('fixmymentals',0);
+						getNotification('Mail', 'New email from FixMyMentals\u00AE',true);
+				        receiveMail('repair_0_0');
 					});
 				}
 			});
@@ -96,4 +96,10 @@ $(document).ready(function(){
 		receiveMsg('Linnea');
 		counterArray['Linnea'] = i+1;
 	}*/
+
+	$('#mailoverlayinput').on('keydown', function(e){
+		if (e.which == 13) {
+			$('#mailoverlaybtn').click();
+		}
+	});
 });

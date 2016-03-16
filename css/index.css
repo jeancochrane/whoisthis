@@ -198,6 +198,5 @@ div.email:not(:first-child) {
 
 #mail_response_navbar ul a {
 	white-space: normal;
-	height: 40px;
-	line-height: 40px;
+	vertical-align: center;
 }

@@ -20,9 +20,10 @@ $(document).ready(function() {
     $(document).on('pagecontainerchange', function(e, ui){
         var activePage = ui.toPage;
         var fromPage = ui.prevPage;
-        if (activePage.id = 'mail_nav') {
+        if (activePage.id == 'mail_nav') {
             $('#mail_list').listview('refresh');
         }
+        
         $('[data-role="page"]').css({position : ''});
     })
 
@@ -45,9 +46,9 @@ $(document).ready(function() {
 });
 
 function getNotification(app, notiText, avoidable) {
-    if (typeof(app)==='undefined') app = 'Messaging';
-    if (typeof(notiText)==='undefined') notiText = 'New Message from [sender]';
-    if (typeof(avoidable)==='undefined') avoidable = true;
+    if (typeof(app)==='undefined') {app = 'Messaging';}
+    if (typeof(notiText)==='undefined') {notiText = 'New Message from [sender]';}
+    if (typeof(avoidable)==='undefined') {avoidable = true;}
 
     var thisPageID = $.mobile.pageContainer.pagecontainer('getActivePage').attr('id');
 
