@@ -335,652 +335,655 @@
 		{}
 	},
 
-	"linnea_0_0" : 
+	"Linnea" : 
 	{
-		"text" : "hey...//i'm sorry about what happened. your mom told me//it sounds terrible//i feel like... i'm responsible or something. you know?//idk//are you there?//aster?//?//are you ignoring me?//that's fine, i won't force you to talk or anything//i just want you to know that i love you. and i miss you//and i guess i hope you have a nice life",
-		"responses" :
-		{}
-	},
-
-	"linnea_1_0" : 
-	{
-		"text" : "",
-		"responses" :
+		"linnea_0_0" : 
 		{
-			"what happened?" : "linnea_1_7",
-			"are you there?" : "linnea_1_2",
-			"i love you too" : "linnea_1_1"
-		}
-	},
+			"text" : "hey...//i'm sorry about what happened. your mom told me//it sounds terrible//i feel like... i'm responsible or something. you know?//idk//are you there?//aster?//?//are you ignoring me?//that's fine, i won't force you to talk or anything//i just want you to know that i love you. and i miss you//and i guess i hope you have a nice life",
+			"responses" :
+			{}
+		},
 
-	"linnea_1_1" : 
-	{
-		"text" : "aster?//um//i'm not sure what to say//it's been a while since i sent that...",
-		"responses" :
+		"linnea_1_0" : 
 		{
-			"how long has it been?" : "linnea_1_5",
-			"oh, i'm sorry" : "linnea_1_6"
-		}
-	},
-
-	"linnea_1_2" : 
-	{
-		"text" : "aster? yes of course, i'm always here//how are you?//it's been a while",
-		"responses" :
-		{
-			"i know, where have i been?" : "linnea_1_3",
-			"i'm not sure. how are you?" : "linnea_1_4"
-		}
-	},
-
-	"linnea_1_3" : 
-	{
-		"text" : "haha, who knows//wait that wasn't a serious question, was it?",
-		"responses" :
-		{
-			"... yes" : "linnea_1_8",
-			"no haha" : "linnea_1_9"
-		}
-	},
-
-	"linnea_1_4" : 
-	{
-		"text" : "i'm doing ok. been better//still feeling a little bit torn up about what happened//tbh",
-		"responses" :
-		{
-			"what happened?" : "linnea_1_7",
-			"i know, me too" : "linnea_1_10"
-		}
-	},
-
-	"linnea_1_5" : 
-	{
-		"text" : "no, it's ok. you don't have to apologize for that//it's nice of you to say, if you mean it//i should be the one saying sorry for what happened, i think//it wasn't fair, especially in light of what happened",
-		"responses" :
-		{
-			"it's ok, i forgive you" : "linnea_1_12",
-			"what happened?" : "linnea_1_7"
-		}
-	},
-
-
-	"linnea_1_6" : 
-	{
-		"text" : "i want to say a few weeks, maybe a month//idk. my feelings have been changing a lot in that time//i'm not sure how i feel about anything anymore",
-		"responses" :
-		{
-			"me neither. who am i?" : "linnea_1_3",
-			"should we talk about it?" : "linnea_1_11"
-		}
-	},
-
-	"linnea_1_7" : 
-	{
-		"text" : "seriously aster? that's all you have to say for yourself?//whatever. i'll talk to you later",
-		"responses" :
-		{
-			"notification" :
+			"text" : "",
+			"responses" :
 			{
-				"type" : "email",
-				"sender" : "FixMyMentals\u00AE",
-				"id" : "repair_1_0"
+				"what happened?" : "linnea_1_7",
+				"are you there?" : "linnea_1_2",
+				"i love you too" : "linnea_1_1"
 			}
-		}
-	},
+		},
 
-	"linnea_1_8" : 
-	{
-		"text" : "you don't remember?//i find that hard to believe//is this some way of telling me you're not sorry for what happened, or what",
-		"responses" :
+		"linnea_1_1" : 
 		{
-			"no, not at all" : "linnea_1_13",
-			"what should i be sorry for?" : "linnea_1_13"
-		}
-	},
-
-	"linnea_1_9" : 
-	{
-		"text" : "ohh ok hahaha//i've been thinking about it and i want to apologize for what i said to you//it wasn't fair, especially in light of what happened",
-		"responses" :
-		{
-			"it's ok, i forgive you" : "linnea_1_12",
-			"what happened?" : "linnea_1_7"
-		}
-	},
-
-	"linnea_1_10" : 
-	{
-		"text" : "i've been thinking about it and i want to apologize for what i said to you//it wasn't fair, especially in light of what happened",
-		"responses" :
-		{
-			"it's ok, i forgive you" : "linnea_1_12",
-			"what happened?" : "linnea_1_7"
-		}
-	},
-
-	"linnea_1_11" : 
-	{
-		"text" : "i don't think i'm ready yet//i need more time to think about what happened between us//is that ok?",
-		"responses" :
-		{
-			"what happened?" : "linnea_1_7",
-			"that's ok" : "linnea_1_14"
-
-		}
-	},
-
-	"linnea_1_12" : 
-	{
-		"text" : "ok, i'm glad//is that all you have to say tho?",
-		"responses" :
-		{
-			"i think so" : "linnea_1_7",
-			"i should apologize too" : "linnea_1_15"
-		}
-	},
-
-	"linnea_1_13" : 
-	{
-		"text" : "ok aster, i get it.//i'll talk to you later.",
-		"responses" :
-		{
-			"notification" :
+			"text" : "aster?//um//i'm not sure what to say//it's been a while since i sent that...",
+			"responses" :
 			{
-				"type" : "email",
-				"sender" : "FixMyMentals\u00AE",
-				"id" : "repair_1_0"
+				"how long has it been?" : "linnea_1_5",
+				"oh, i'm sorry" : "linnea_1_6"
 			}
-		}
-	},
+		},
 
-	"linnea_1_14" : 
-	{
-		"text" : "thank you aster. i'll talk to you later then//and... i love you too",
-		"responses" :
+		"linnea_1_2" : 
 		{
-			"notification" :
+			"text" : "aster? yes of course, i'm always here//how are you?//it's been a while",
+			"responses" :
 			{
-				"type" : "email",
-				"sender" : "FixMyMentals\u00AE",
-				"id" : "repair_1_0"
+				"i know, where have i been?" : "linnea_1_3",
+				"i'm not sure. how are you?" : "linnea_1_4"
 			}
-		}
-	},
+		},
 
-	"linnea_1_15" : 
-	{
-		"text" : "i think so too//...//if this is a real apology you know you're going to have to be a little more specific",
-		"responses" :
+		"linnea_1_3" : 
 		{
-			"i'm not sure what to say" : "linnea_1_13",
-			"i'm sorry for everything" : "linnea_1_13"
-		}
-	},
-
-	"linnea_2_0" :
-	{
-		"text" : "did you get a notice about this update drive thing too?//i'm guessing you did, since you're back on a smartphone for now//this is such bullshit i s2g",
-		"responses" :
-		{
-			"what's bullshit about it?" : "linnea_2_1",
-			"i'm worried about my dad" : "linnea_2_2"	
-		}
-	},
-
-	"linnea_2_1" :
-	{
-		"text" : "it's so transparently an effort to round up and surveil phone users//as if they don't do enough of that already",
-		"responses" :
-		{
-			"that sounds paranoid" : "linnea_2_3",
-			"why watch phone users?" : "linnea_2_4"	
-		}
-	},
-
-	"linnea_2_2" :
-	{
-		"text" : "really... how so?",
-		"responses" :
-		{
-			"what did my dad do to me?" : "linnea_2_9"
-		}
-	},
-
-	"linnea_2_3" :
-	{
-		"text" : "the hell? aster i thought you were good about this stuff//i guess your fancy new job has changed you",
-		"responses" :
-		{
-			"what about my job?" : "linnea_2_5",
-			"i don't know who i am anymore" : "linnea_2_6"
-		}
-	},
-
-	"linnea_2_4" :
-	{
-		"text" : "idk, because they don't spend enough money watching brown ppl already i guess//i'm surprised to hear this from you? i always thought you knew this stuff//i guess working your fancy new job has changed you",
-		"responses" :
-		{
-			"what about my job?" : "linnea_2_5",
-			"no, you're right" : "linnea_2_7"
-		}
-	},
-
-	"linnea_2_5" :
-	{
-		"text" : "like working for the third-largest tech company on the planet -isn't- going to sway your opinion on backdoor surveillance//who knows, maybe now that you're back on a phone you'll come around to agree with me",
-		"responses" :
-		{
-			"you better hope so" : "linnea_2_8"
-		}
-	},
-
-	"linnea_2_6" :
-	{
-		"text" : "oh... aster, i'm sorry. i'm so sorry//i shouldn't have said anything",
-		"responses" :
-		{
-			"i'm just thinking about my dad" : "linnea_2_2"
-		}
-	},
-
-	"linnea_2_7" :
-	{
-		"text" : "just gonna roll over like that?//who are you and what have you done with aster lol",
-		"responses" :
-		{
-			"aster isn't here, mrs. torrence" : "linnea_2_8"
-		}
-	},
-
-	"linnea_2_8" :
-	{
-		"text" : "hahaha//nice//anyway how are you?",
-		"responses" :
-		{
-			"i'm worried about my dad" : "linnea_2_2"
-		}
-	},
-
-	"linnea_2_9" :
-	{
-		"text" : "what kind of a question is that?",
-		"responses" :
-		{
-			"i need to know more about my father" : "linnea_2_10"
-		}
-	},
-
-	"linnea_2_10" :
-	{
-		"text" : "i can't help you with that, aster//you should really talk to your mom",
-		"responses" :
-		{
-			"i will" : "linnea_2_11"
-		}
-	},
-
-	"linnea_2_11" :
-	{
-		"text" : "good luck, ok?//i'm thinking of you",
-		"responses" :
-		{
-			"notification" :
+			"text" : "haha, who knows//wait that wasn't a serious question, was it?",
+			"responses" :
 			{
-				"type" : "message",
-				"sender" : "Mom",
-				"id" : "mom_2_0"
+				"... yes" : "linnea_1_8",
+				"no haha" : "linnea_1_9"
 			}
-		}
-	},
+		},
 
-	"linnea_3_0" :
-	{
-		"text" : "is your boss vagueblogging about you??//<span style=\"font-family:menlo;font-size:12px;\">&lt;ERR: PICTURE FAILED TO LOAD&gt;</span>",
-		"responses" :
+		"linnea_1_4" : 
 		{
-			"you follow hawthorne?" : "linnea_3_1",
-			"i can't see the picture" : "linnea_3_2",
-			"what is up with him?" : "linnea_3_3"	
-		}
-	},
-
-	"linnea_3_1" :
-	{
-		"text" : "i wish i didn't tbh//how is working with him, anyway? he's such a tool online",
-		"responses" :
-		{
-			"i like it" : "linnea_3_4",
-			"it's awful" : "linnea_3_5"	
-		}
-	},
-
-	"linnea_3_2" :
-	{
-		"text" : "might be for the best, considering you have to work with him//...how is the job, anyway? i've never really asked",
-		"responses" :
-		{
-			"i like it" : "linnea_3_4",
-			"it's awful" : "linnea_3_5"	
-		}
-	},
-
-	"linnea_3_3" :
-	{
-		"text" : "omg i know. what a tool//i feel like it's not like you to say that tho//is something up at work?",
-		"responses" :
-		{
-			"yeah..." : "linnea_3_5",
-			"no, i like work" : "linnea_3_4"	
-		}
-	},
-
-	"linnea_3_4" :
-	{
-		"text" : "you like it......?//but your boss is a raging transphobe",
-		"responses" :
-		{
-			"no, he is?" : "linnea_3_6",
-			"yeah, i guess he is" : "linnea_3_7"
-		}
-	},
-
-	"linnea_3_5" :
-	{
-		"text" : "really? what's wrong?",
-		"responses" :
-		{
-			"i don't understand what i do" : "linnea_3_8",
-			"my boss is a transphobe" : "linnea_3_7"
-		}
-	},
-
-	"linnea_3_6" :
-	{
-		"text" : "idk. i guess it's not my place to make those kinds of calls//i'm just surprised you're comfortable with it//i think i wouldn't last a day there, for a lot of reasons. but the biggest is that everyone else is white",
-		"responses" :
-		{
-			"say more" : "linnea_3_10",
-			"they are?" : "linnea_3_9"
-		}
-	},
-
-	"linnea_3_7" :
-	{
-		"text" : "i mean i've seen how it is online, but i can't imagine how bad it must be person-to-person//so what keeps you on?",
-		"responses" :
-		{
-			"i want to keep an eye on what they're doing" : "linnea_3_8",
-			"i don't really know" : "linnea_3_10"
-		}
-	},
-
-	"linnea_3_8" :
-	{
-		"text" : "... you're still on DCP, right?//i mean, i don't really know how anyone could be expected to understand it//isn't the point that it makes its decisions based on datasets too large for humans to understand?",
-		"responses" :
-		{
-			"say more" : "linnea_3_10"
-		}
-	},
-
-	"linnea_3_9" :
-	{
-		"text" : "yeah, aren't they?",
-		"responses" :
-		{
-			"i guess so" : "linnea_3_10"
-		}
-	},
-
-	"linnea_3_10" :
-	{
-		"text" : "it just seems like a bunch of rich white guys designing a system that can more efficiently suppress poor brown ppl while pretending to speak for them//well, a bunch of rich white girls*, in your case//and before you get into it, yes, you count even though you're 'spanish'",
-		"responses" :
-		{
-			"what does that mean?" : "linnea_3_11"
-		}
-	},
-
-	"linnea_3_11" :
-	{
-		"text" : ".......//god dammit aster//your parents are from madrid. mine are from oaxaca. yours got green cards. mine didn't.//we've been through this a million times and i don't want to hear about it anymore",
-		"responses" :
-		{
-			"notification" :
+			"text" : "i'm doing ok. been better//still feeling a little bit torn up about what happened//tbh",
+			"responses" :
 			{
-				"type" : "email",
-				"sender" : "FixMyMentals\u00AE",
-				"id" : "repair_4_0"
+				"what happened?" : "linnea_1_7",
+				"i know, me too" : "linnea_1_10"
 			}
-		}
-	},
+		},
 
-	"linnea_4_0" :
-	{
-		"text" : "hey//i'm sorry about what i said earlier//i know it doesn't mean much, because i seem to be always apologizing for myself//just know that i am sorry, fwiw",
-		"responses" :
+		"linnea_1_5" : 
 		{
-			"i should be saying sorry" : "linnea_4_1",
-			"what's going on with us?" : "linnea_4_2",
-			"i've got bigger problems" : "linnea_4_3"
-		}
-	},
-
-	"linnea_4_1" :
-	{
-		"text" : "it'll be a little more substantial this time, i hope?//don't worry, i'm just kidding//what do you have to say, aster?",
-		"responses" :
-		{
-			"i was wrong about the sensors" : "linnea_4_16",
-			"i was wrong about how you felt" : "linnea_4_15",
-			"i think you should apologize" : "linnea_4_13"
-		}
-	},
-
-	"linnea_4_2" :
-	{
-		"text" : "idk aster//i just feel like we never dealt with what happened between us",
-		"responses" :
-		{
-			"i feel the same way" : "linnea_4_5",
-			"what is left to deal with?" : "linnea_4_4"
-		}
-	},
-
-	"linnea_4_3" :
-	{
-		"text" : "bigger problems? like what?",
-		"responses" :
-		{
-			"our fight..." : "linnea_4_6",
-			"the census..." : "linnea_4_7",
-			"my dad..." : "linnea_4_8",
-			"my boss..." : "linnea_4_9"
-		}
-	},
-
-	"linnea_4_4" :
-	{
-		"text" : "everything, to start//the way i treated you. the way i disagreed with you before i'd even heard you speak. and the way you treated me. the terrible things you said.//the line you crossed when you stepped into my mind without asking",
-		"responses" :
-		{
-			"i disagree" : "linnea_4_13",
-			"you're right, linnea" : "linnea_4_14"
-		}
-	},
-
-	"linnea_4_5" :
-	{
-		"text" : "that's such a relief to hear//here i was, thinking maybe you didn't care//there's so much i want to say, but i've been in my own head too long. i want to hear from you//what do you have to say, aster?",
-		"responses" :
-		{
-			"i was wrong about the sensors" : "linnea_4_16",
-			"i was wrong about how you felt" : "linnea_4_15",
-			"i think you should apologize" : "linnea_4_13"
-		}
-	},
-
-	"linnea_4_6" :
-	{
-		"text" : "oh//our fight.//what do you have to say?",
-		"responses" :
-		{
-			"i was wrong about the sensors" : "linnea_4_16",
-			"i was wrong about how you felt" : "linnea_4_15",
-			"i think you should apologize" : "linnea_4_13"
-		}
-	},
-
-	"linnea_4_7" :
-	{
-		"text" : "oh, aster//don't worry, your mom told me all about it",
-		"responses" :
-		{
-			"i'm glad you know" : "linnea_4_10"
-		}
-	},
-
-	"linnea_4_8" :
-	{
-		"text" : "oh, aster//don't worry, your mom told me all about it",
-		"responses" :
-		{
-			"i'm glad you know" : "linnea_4_10"
-		}
-	},
-
-	"linnea_4_9" :
-	{
-		"text" : "oh, aster//don't worry, your mom told me all about it",
-		"responses" :
-		{
-			"i'm glad you know" : "linnea_4_10"
-		}
-	},
-
-	"linnea_4_10" :
-	{
-		"text" : "...so that's the most important thing to you, huh?",
-		"responses" :
-		{
-			"it's life or death" : "linnea_4_12",
-			"no, i guess it's not" : "linnea_4_11"
-		}
-	},
-
-	"linnea_4_11" :
-	{
-		"text" : "then what do you have to say for yourself?",
-		"responses" :
-		{
-			"i was wrong about the sensors" : "linnea_4_16",
-			"i was wrong about how you felt" : "linnea_4_15",
-			"i think you should apologize" : "linnea_4_13"
-		}
-	},
-
-	"linnea_4_12" : 
-	{
-		"text" : "i suppose that's true//idk//i guess i was just hoping that our relationship would come first//but maybe that isn't the most important thing to you. which is fine. it's in your right. but i'm still disappointed//all i can say is this: the encryption key is HARAWAY. i stole it from your mom. what they're doing isn't right.//good luck out there. i'll see you around",
-		"responses" :
-		{
-			"notification" :
+			"text" : "no, it's ok. you don't have to apologize for that//it's nice of you to say, if you mean it//i should be the one saying sorry for what happened, i think//it wasn't fair, especially in light of what happened",
+			"responses" :
 			{
-				"type" : "email",
-				"sender" : "Bureau of Information Enforcement",
-				"id" : "census_4_0"
+				"it's ok, i forgive you" : "linnea_1_12",
+				"what happened?" : "linnea_1_7"
 			}
-		}
-	},
+		},
 
-	"linnea_4_13" : 
-	{
-		"text" : "then i guess there's nothing left to say, is there?//i'm done. i hope you're happy.//your password is HARAWAY btw. i was hoping the therapy would help but it seems like you've just gotten worse. do what you will – it's in your hands now. just the way you like it.//i'll see you around.",
-		"responses" :
+
+		"linnea_1_6" : 
 		{
-			"notification" :
+			"text" : "i want to say a few weeks, maybe a month//idk. my feelings have been changing a lot in that time//i'm not sure how i feel about anything anymore",
+			"responses" :
 			{
-				"type" : "email",
-				"sender" : "Bureau of Information Enforcement",
-				"id" : "census_4_0"
+				"me neither. who am i?" : "linnea_1_3",
+				"should we talk about it?" : "linnea_1_11"
 			}
-		}
-	},
+		},
 
-	"linnea_4_14" :
-	{
-		"text" : "then what do you have to say for yourself?",
-		"responses" :
+		"linnea_1_7" : 
 		{
-			"i was wrong about the sensors" : "linnea_4_16",
-			"i was wrong about how you felt" : "linnea_4_15",
-			"i think you should apologize" : "linnea_4_13"
-		}
-	},
-
-	"linnea_4_15" :
-	{
-		"text" : "were you wrong because the tech didn't work? or because you shouldn't have used it in the first place?",
-		"responses" :
-		{
-			"the tech didn't work" : "linnea_4_13",
-			"i shouldn't have used it" : "linnea_4_16"
-		}
-	},
-
-	"linnea_4_16" :
-	{
-		"text" : "you don't know how much of a relief it is to hear you say that//i accept your apology//but...//it wasn't all your fault. i was wrong too//no matter what hawthorne wanted from you, i know you had the best intentions in mind when you got the procedure. seeking a better understanding of people isn't an evil goal.//you overstepped your bounds when you used them on me. you broke an important boundary there. but i was being unfair when i said the only point of the tech was domination//i still think the sensors are evil lmao. but i'm still sorry for what happened//i guess we were both wrong?",
-		"responses" :
-		{
-			"i guess we were" : "linnea_4_17"
-		}
-	},
-
-	"linnea_4_17" :
-	{
-		"text" : "hah. the way it's always been//you seem changed, aster. different. in a good way//i don't know what's going on but i know the key to stopping it. i think you're ready. do you want to hear?",
-		"responses" :
-		{
-			"i'm ready" : "linnea_4_18"
-		}
-	},
-
-	"linnea_4_18" :
-	{
-		"text" : "ok, so i found it in your mom's car when she drove me home from work last week (don't ask)//it's an encryption key//HARAWAY//just like that//do you know what it means?",
-		"responses" :
-		{
-			"i think i know"  : "linnea_4_19",
-			"i'm not sure" : "linnea_4_20"
-		}
-	},
-
-	"linnea_4_19" :
-	{
-		"text" : "then good luck, aster. and be safe//and don't tell your mom!!!",
-		"responses" :
-		{
-			"notification" :
+			"text" : "seriously aster? that's all you have to say for yourself?//whatever. i'll talk to you later",
+			"responses" :
 			{
-				"type" : "email",
-				"sender" : "Bureau of Information Enforcement",
-				"id" : "census_4_0"
+				"notification" :
+				{
+					"type" : "email",
+					"sender" : "FixMyMentals\u00AE",
+					"id" : "repair_1_0"
+				}
 			}
-		}
-	},
+		},
 
-	"linnea_4_20" :
-	{
-		"text" : "try checking your apps. i'm sure it's something they're hiding from you//and don't tell your mom!!!",
-		"responses" :
+		"linnea_1_8" : 
 		{
-			"notification" :
+			"text" : "you don't remember?//i find that hard to believe//is this some way of telling me you're not sorry for what happened, or what",
+			"responses" :
 			{
-				"type" : "email",
-				"sender" : "Bureau of Information Enforcement",
-				"id" : "census_4_0"
+				"no, not at all" : "linnea_1_13",
+				"what should i be sorry for?" : "linnea_1_13"
+			}
+		},
+
+		"linnea_1_9" : 
+		{
+			"text" : "ohh ok hahaha//i've been thinking about it and i want to apologize for what i said to you//it wasn't fair, especially in light of what happened",
+			"responses" :
+			{
+				"it's ok, i forgive you" : "linnea_1_12",
+				"what happened?" : "linnea_1_7"
+			}
+		},
+
+		"linnea_1_10" : 
+		{
+			"text" : "i've been thinking about it and i want to apologize for what i said to you//it wasn't fair, especially in light of what happened",
+			"responses" :
+			{
+				"it's ok, i forgive you" : "linnea_1_12",
+				"what happened?" : "linnea_1_7"
+			}
+		},
+
+		"linnea_1_11" : 
+		{
+			"text" : "i don't think i'm ready yet//i need more time to think about what happened between us//is that ok?",
+			"responses" :
+			{
+				"what happened?" : "linnea_1_7",
+				"that's ok" : "linnea_1_14"
+
+			}
+		},
+
+		"linnea_1_12" : 
+		{
+			"text" : "ok, i'm glad//is that all you have to say tho?",
+			"responses" :
+			{
+				"i think so" : "linnea_1_7",
+				"i should apologize too" : "linnea_1_15"
+			}
+		},
+
+		"linnea_1_13" : 
+		{
+			"text" : "ok aster, i get it.//i'll talk to you later.",
+			"responses" :
+			{
+				"notification" :
+				{
+					"type" : "email",
+					"sender" : "FixMyMentals\u00AE",
+					"id" : "repair_1_0"
+				}
+			}
+		},
+
+		"linnea_1_14" : 
+		{
+			"text" : "thank you aster. i'll talk to you later then//and... i love you too",
+			"responses" :
+			{
+				"notification" :
+				{
+					"type" : "email",
+					"sender" : "FixMyMentals\u00AE",
+					"id" : "repair_1_0"
+				}
+			}
+		},
+
+		"linnea_1_15" : 
+		{
+			"text" : "i think so too//...//if this is a real apology you know you're going to have to be a little more specific",
+			"responses" :
+			{
+				"i'm not sure what to say" : "linnea_1_13",
+				"i'm sorry for everything" : "linnea_1_13"
+			}
+		},
+
+		"linnea_2_0" :
+		{
+			"text" : "did you get a notice about this update drive thing too?//i'm guessing you did, since you're back on a smartphone for now//this is such bullshit i s2g",
+			"responses" :
+			{
+				"what's bullshit about it?" : "linnea_2_1",
+				"i'm worried about my dad" : "linnea_2_2"	
+			}
+		},
+
+		"linnea_2_1" :
+		{
+			"text" : "it's so transparently an effort to round up and surveil phone users//as if they don't do enough of that already",
+			"responses" :
+			{
+				"that sounds paranoid" : "linnea_2_3",
+				"why watch phone users?" : "linnea_2_4"	
+			}
+		},
+
+		"linnea_2_2" :
+		{
+			"text" : "really... how so?",
+			"responses" :
+			{
+				"what did my dad do to me?" : "linnea_2_9"
+			}
+		},
+
+		"linnea_2_3" :
+		{
+			"text" : "the hell? aster i thought you were good about this stuff//i guess your fancy new job has changed you",
+			"responses" :
+			{
+				"what about my job?" : "linnea_2_5",
+				"i don't know who i am anymore" : "linnea_2_6"
+			}
+		},
+
+		"linnea_2_4" :
+		{
+			"text" : "idk, because they don't spend enough money watching brown ppl already i guess//i'm surprised to hear this from you? i always thought you knew this stuff//i guess working your fancy new job has changed you",
+			"responses" :
+			{
+				"what about my job?" : "linnea_2_5",
+				"no, you're right" : "linnea_2_7"
+			}
+		},
+
+		"linnea_2_5" :
+		{
+			"text" : "like working for the third-largest tech company on the planet -isn't- going to sway your opinion on backdoor surveillance//who knows, maybe now that you're back on a phone you'll come around to agree with me",
+			"responses" :
+			{
+				"you better hope so" : "linnea_2_8"
+			}
+		},
+
+		"linnea_2_6" :
+		{
+			"text" : "oh... aster, i'm sorry. i'm so sorry//i shouldn't have said anything",
+			"responses" :
+			{
+				"i'm just thinking about my dad" : "linnea_2_2"
+			}
+		},
+
+		"linnea_2_7" :
+		{
+			"text" : "just gonna roll over like that?//who are you and what have you done with aster lol",
+			"responses" :
+			{
+				"aster isn't here, mrs. torrence" : "linnea_2_8"
+			}
+		},
+
+		"linnea_2_8" :
+		{
+			"text" : "hahaha//nice//anyway how are you?",
+			"responses" :
+			{
+				"i'm worried about my dad" : "linnea_2_2"
+			}
+		},
+
+		"linnea_2_9" :
+		{
+			"text" : "what kind of a question is that?",
+			"responses" :
+			{
+				"i need to know more about my father" : "linnea_2_10"
+			}
+		},
+
+		"linnea_2_10" :
+		{
+			"text" : "i can't help you with that, aster//you should really talk to your mom",
+			"responses" :
+			{
+				"i will" : "linnea_2_11"
+			}
+		},
+
+		"linnea_2_11" :
+		{
+			"text" : "good luck, ok?//i'm thinking of you",
+			"responses" :
+			{
+				"notification" :
+				{
+					"type" : "message",
+					"sender" : "Mom",
+					"id" : "mom_2_0"
+				}
+			}
+		},
+
+		"linnea_3_0" :
+		{
+			"text" : "is your boss vagueblogging about you??//<span style=\"font-family:menlo;font-size:12px;\">&lt;ERR: PICTURE FAILED TO LOAD&gt;</span>",
+			"responses" :
+			{
+				"you follow hawthorne?" : "linnea_3_1",
+				"i can't see the picture" : "linnea_3_2",
+				"what is up with him?" : "linnea_3_3"	
+			}
+		},
+
+		"linnea_3_1" :
+		{
+			"text" : "i wish i didn't tbh//how is working with him, anyway? he's such a tool online",
+			"responses" :
+			{
+				"i like it" : "linnea_3_4",
+				"it's awful" : "linnea_3_5"	
+			}
+		},
+
+		"linnea_3_2" :
+		{
+			"text" : "might be for the best, considering you have to work with him//...how is the job, anyway? i've never really asked",
+			"responses" :
+			{
+				"i like it" : "linnea_3_4",
+				"it's awful" : "linnea_3_5"	
+			}
+		},
+
+		"linnea_3_3" :
+		{
+			"text" : "omg i know. what a tool//i feel like it's not like you to say that tho//is something up at work?",
+			"responses" :
+			{
+				"yeah..." : "linnea_3_5",
+				"no, i like work" : "linnea_3_4"	
+			}
+		},
+
+		"linnea_3_4" :
+		{
+			"text" : "you like it......?//but your boss is a raging transphobe",
+			"responses" :
+			{
+				"no, he is?" : "linnea_3_6",
+				"yeah, i guess he is" : "linnea_3_7"
+			}
+		},
+
+		"linnea_3_5" :
+		{
+			"text" : "really? what's wrong?",
+			"responses" :
+			{
+				"i don't understand what i do" : "linnea_3_8",
+				"my boss is a transphobe" : "linnea_3_7"
+			}
+		},
+
+		"linnea_3_6" :
+		{
+			"text" : "idk. i guess it's not my place to make those kinds of calls//i'm just surprised you're comfortable with it//i think i wouldn't last a day there, for a lot of reasons. but the biggest is that everyone else is white",
+			"responses" :
+			{
+				"say more" : "linnea_3_10",
+				"they are?" : "linnea_3_9"
+			}
+		},
+
+		"linnea_3_7" :
+		{
+			"text" : "i mean i've seen how it is online, but i can't imagine how bad it must be person-to-person//so what keeps you on?",
+			"responses" :
+			{
+				"i want to keep an eye on what they're doing" : "linnea_3_8",
+				"i don't really know" : "linnea_3_10"
+			}
+		},
+
+		"linnea_3_8" :
+		{
+			"text" : "... you're still on DCP, right?//i mean, i don't really know how anyone could be expected to understand it//isn't the point that it makes its decisions based on datasets too large for humans to understand?",
+			"responses" :
+			{
+				"say more" : "linnea_3_10"
+			}
+		},
+
+		"linnea_3_9" :
+		{
+			"text" : "yeah, aren't they?",
+			"responses" :
+			{
+				"i guess so" : "linnea_3_10"
+			}
+		},
+
+		"linnea_3_10" :
+		{
+			"text" : "it just seems like a bunch of rich white guys designing a system that can more efficiently suppress poor brown ppl while pretending to speak for them//well, a bunch of rich white girls*, in your case//and before you get into it, yes, you count even though you're 'spanish'",
+			"responses" :
+			{
+				"what does that mean?" : "linnea_3_11"
+			}
+		},
+
+		"linnea_3_11" :
+		{
+			"text" : ".......//god dammit aster//your parents are from madrid. mine are from oaxaca. yours got green cards. mine didn't.//we've been through this a million times and i don't want to hear about it anymore",
+			"responses" :
+			{
+				"notification" :
+				{
+					"type" : "email",
+					"sender" : "FixMyMentals\u00AE",
+					"id" : "repair_4_0"
+				}
+			}
+		},
+
+		"linnea_4_0" :
+		{
+			"text" : "hey//i'm sorry about what i said earlier//i know it doesn't mean much, because i seem to be always apologizing for myself//just know that i am sorry, fwiw",
+			"responses" :
+			{
+				"i should be saying sorry" : "linnea_4_1",
+				"what's going on with us?" : "linnea_4_2",
+				"i've got bigger problems" : "linnea_4_3"
+			}
+		},
+
+		"linnea_4_1" :
+		{
+			"text" : "it'll be a little more substantial this time, i hope?//don't worry, i'm just kidding//what do you have to say, aster?",
+			"responses" :
+			{
+				"i was wrong about the sensors" : "linnea_4_16",
+				"i was wrong about how you felt" : "linnea_4_15",
+				"i think you should apologize" : "linnea_4_13"
+			}
+		},
+
+		"linnea_4_2" :
+		{
+			"text" : "idk aster//i just feel like we never dealt with what happened between us",
+			"responses" :
+			{
+				"i feel the same way" : "linnea_4_5",
+				"what is left to deal with?" : "linnea_4_4"
+			}
+		},
+
+		"linnea_4_3" :
+		{
+			"text" : "bigger problems? like what?",
+			"responses" :
+			{
+				"our fight..." : "linnea_4_6",
+				"the census..." : "linnea_4_7",
+				"my dad..." : "linnea_4_8",
+				"my boss..." : "linnea_4_9"
+			}
+		},
+
+		"linnea_4_4" :
+		{
+			"text" : "everything, to start//the way i treated you. the way i disagreed with you before i'd even heard you speak. and the way you treated me. the terrible things you said.//the line you crossed when you stepped into my mind without asking",
+			"responses" :
+			{
+				"i disagree" : "linnea_4_13",
+				"you're right, linnea" : "linnea_4_14"
+			}
+		},
+
+		"linnea_4_5" :
+		{
+			"text" : "that's such a relief to hear//here i was, thinking maybe you didn't care//there's so much i want to say, but i've been in my own head too long. i want to hear from you//what do you have to say, aster?",
+			"responses" :
+			{
+				"i was wrong about the sensors" : "linnea_4_16",
+				"i was wrong about how you felt" : "linnea_4_15",
+				"i think you should apologize" : "linnea_4_13"
+			}
+		},
+
+		"linnea_4_6" :
+		{
+			"text" : "oh//our fight.//what do you have to say?",
+			"responses" :
+			{
+				"i was wrong about the sensors" : "linnea_4_16",
+				"i was wrong about how you felt" : "linnea_4_15",
+				"i think you should apologize" : "linnea_4_13"
+			}
+		},
+
+		"linnea_4_7" :
+		{
+			"text" : "oh, aster//don't worry, your mom told me all about it",
+			"responses" :
+			{
+				"i'm glad you know" : "linnea_4_10"
+			}
+		},
+
+		"linnea_4_8" :
+		{
+			"text" : "oh, aster//don't worry, your mom told me all about it",
+			"responses" :
+			{
+				"i'm glad you know" : "linnea_4_10"
+			}
+		},
+
+		"linnea_4_9" :
+		{
+			"text" : "oh, aster//don't worry, your mom told me all about it",
+			"responses" :
+			{
+				"i'm glad you know" : "linnea_4_10"
+			}
+		},
+
+		"linnea_4_10" :
+		{
+			"text" : "...so that's the most important thing to you, huh?",
+			"responses" :
+			{
+				"it's life or death" : "linnea_4_12",
+				"no, i guess it's not" : "linnea_4_11"
+			}
+		},
+
+		"linnea_4_11" :
+		{
+			"text" : "then what do you have to say for yourself?",
+			"responses" :
+			{
+				"i was wrong about the sensors" : "linnea_4_16",
+				"i was wrong about how you felt" : "linnea_4_15",
+				"i think you should apologize" : "linnea_4_13"
+			}
+		},
+
+		"linnea_4_12" : 
+		{
+			"text" : "i suppose that's true//idk//i guess i was just hoping that our relationship would come first//but maybe that isn't the most important thing to you. which is fine. it's in your right. but i'm still disappointed//all i can say is this: the encryption key is HARAWAY. i stole it from your mom. what they're doing isn't right.//good luck out there. i'll see you around",
+			"responses" :
+			{
+				"notification" :
+				{
+					"type" : "email",
+					"sender" : "Bureau of Information Enforcement",
+					"id" : "census_4_0"
+				}
+			}
+		},
+
+		"linnea_4_13" : 
+		{
+			"text" : "then i guess there's nothing left to say, is there?//i'm done. i hope you're happy.//your password is HARAWAY btw. i was hoping the therapy would help but it seems like you've just gotten worse. do what you will – it's in your hands now. just the way you like it.//i'll see you around.",
+			"responses" :
+			{
+				"notification" :
+				{
+					"type" : "email",
+					"sender" : "Bureau of Information Enforcement",
+					"id" : "census_4_0"
+				}
+			}
+		},
+
+		"linnea_4_14" :
+		{
+			"text" : "then what do you have to say for yourself?",
+			"responses" :
+			{
+				"i was wrong about the sensors" : "linnea_4_16",
+				"i was wrong about how you felt" : "linnea_4_15",
+				"i think you should apologize" : "linnea_4_13"
+			}
+		},
+
+		"linnea_4_15" :
+		{
+			"text" : "were you wrong because the tech didn't work? or because you shouldn't have used it in the first place?",
+			"responses" :
+			{
+				"the tech didn't work" : "linnea_4_13",
+				"i shouldn't have used it" : "linnea_4_16"
+			}
+		},
+
+		"linnea_4_16" :
+		{
+			"text" : "you don't know how much of a relief it is to hear you say that//i accept your apology//but...//it wasn't all your fault. i was wrong too//no matter what hawthorne wanted from you, i know you had the best intentions in mind when you got the procedure. seeking a better understanding of people isn't an evil goal.//you overstepped your bounds when you used them on me. you broke an important boundary there. but i was being unfair when i said the only point of the tech was domination//i still think the sensors are evil lmao. but i'm still sorry for what happened//i guess we were both wrong?",
+			"responses" :
+			{
+				"i guess we were" : "linnea_4_17"
+			}
+		},
+
+		"linnea_4_17" :
+		{
+			"text" : "hah. the way it's always been//you seem changed, aster. different. in a good way//i don't know what's going on but i know the key to stopping it. i think you're ready. do you want to hear?",
+			"responses" :
+			{
+				"i'm ready" : "linnea_4_18"
+			}
+		},
+
+		"linnea_4_18" :
+		{
+			"text" : "ok, so i found it in your mom's car when she drove me home from work last week (don't ask)//it's an encryption key//HARAWAY//just like that//do you know what it means?",
+			"responses" :
+			{
+				"i think i know"  : "linnea_4_19",
+				"i'm not sure" : "linnea_4_20"
+			}
+		},
+
+		"linnea_4_19" :
+		{
+			"text" : "then good luck, aster. and be safe//and don't tell your mom!!!",
+			"responses" :
+			{
+				"notification" :
+				{
+					"type" : "email",
+					"sender" : "Bureau of Information Enforcement",
+					"id" : "census_4_0"
+				}
+			}
+		},
+
+		"linnea_4_20" :
+		{
+			"text" : "try checking your apps. i'm sure it's something they're hiding from you//and don't tell your mom!!!",
+			"responses" :
+			{
+				"notification" :
+				{
+					"type" : "email",
+					"sender" : "Bureau of Information Enforcement",
+					"id" : "census_4_0"
+				}
 			}
 		}
 	},
