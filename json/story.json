@@ -988,391 +988,397 @@
 		}
 	},
 
-	"mom_1_0" : 
-	{ 
-		"text": "Hi honey, How are you? I haven't heard from you in a few days. Just checking in to say hi. I love you! Love, Mom", 
-		"responses" : 
-		{
-			"hey mom, how are you?" : "mom_1_1",
-			"i'm hanging in there" : "mom_1_2"
-		}
-	},
-
-	"mom_1_1" : 
-	{ 
-		"text": "Hi dear, I'm doing well thank you. Spending too much time at the warehouse as usual ha ha. Thinking of you. Have you heard from Linnea recently? She messaged me to say she couldn't get in touch with you. Love, Mom", 
-		"responses" : 
-		{
-			"i'll get in touch with her" : "mom_1_3",
-			"the warehouse?" : "mom_1_4"
-		}
-	},
-
-	"mom_1_2" : 
-	{ 
-		"text": "Hi hun, That's OK. You're going through a tough time right now, it's only normal. Just remember that I always love you. Hugs and kisses. Have you heard from Linnea recently? She has messaged me a few times asking for you and she claims your device isn't getting her messages. Do you know anything about that? Love, Mom", 
-		"responses" : 
-		{
-			"weird, i'll check now" : "linnea_1_0"
-		}
-	},
-
-	"mom_1_3" : 
-	{ 
-		"text": "Hi honey, Good thinking. I felt bad when you two stopped talking. You always worked very well together, I thought. OK, I'll stop being embarassing now. I love you. Kisses and hugs. Love, Mom", 
-		"responses" : 
-		{
-			"i love you too, mom" : "linnea_1_0"
-		}
-	},
-
-	"mom_1_4" : 
-	{ 
-		"text": "Hi honey, I'm confused about the question? You're asking about my work? What about the warehouse? Love, Mom", 
-		"responses" : 
-		{
-			"i'm sorry, i'm confused" : "mom_1_2",
-			"do i work there too?" : "mom_1_5"
-		}
-	},
-
-	"mom_1_5" : 
-	{ 
-		"text": "Hi hun, Of course not. Listen, I can't answer those kinds of questions right now. OK? For now, please get in touch with Linnea. She keeps messaging me asking to speak with you and it's very frustrating. Love, Mom", 
-		"responses" : 
-		{
-			"sorry, mom. i'll talk to linnea" : "linnea_1_0"
-		}
-	},
-
-	"mom_2_0" : 
-	{ 
-		"text": "", 
-		"responses" : 
-		{
-			"mom, what did dad do?" : "mom_2_1"
-		}
-	},
-
-	"mom_2_1" : 
-	{ 
-		"text": "Hi love, Excuse me? Love, Mom", 
-		"responses" : 
-		{
-			"tell me what dad did to me" : "mom_2_2",
-			"never mind" : "mom_2_3"
-		}
-	},
-
-	"mom_2_2" : 
-	{ 
-		"text": "Hi honey, I'm not sure I understand what you mean. This is a hard question for me. I can't think of anything your father did that could have changed the beautiful person you are now. Not that he did anything in particular. My meaning is getting mixed up here. Let's talk later. Love, Mom", 
-		"responses" : 
-		{
-			"notification" :
+	"Mom" :
+	{	
+		"mom_1_0" : 
+		{ 
+			"text": "Hi honey, How are you? I haven't heard from you in a few days. Just checking in to say hi. I love you! Love, Mom", 
+			"responses" : 
 			{
-				"type" : "email",
-				"sender" : "Census Bureau",
-				"id" : "census_3_0"
+				"hey mom, how are you?" : "mom_1_1",
+				"i'm hanging in there" : "mom_1_2"
+			}
+		},
+
+		"mom_1_1" : 
+		{ 
+			"text": "Hi dear, I'm doing well thank you. Spending too much time at the warehouse as usual ha ha. Thinking of you. Have you heard from Linnea recently? She messaged me to say she couldn't get in touch with you. Love, Mom", 
+			"responses" : 
+			{
+				"i'll get in touch with her" : "mom_1_3",
+				"the warehouse?" : "mom_1_4"
+			}
+		},
+
+		"mom_1_2" : 
+		{ 
+			"text": "Hi hun, That's OK. You're going through a tough time right now, it's only normal. Just remember that I always love you. Hugs and kisses. Have you heard from Linnea recently? She has messaged me a few times asking for you and she claims your device isn't getting her messages. Do you know anything about that? Love, Mom", 
+			"responses" : 
+			{
+				"weird, i'll check now" : "linnea_1_0"
+			}
+		},
+
+		"mom_1_3" : 
+		{ 
+			"text": "Hi honey, Good thinking. I felt bad when you two stopped talking. You always worked very well together, I thought. OK, I'll stop being embarassing now. I love you. Kisses and hugs. Love, Mom", 
+			"responses" : 
+			{
+				"i love you too, mom" : "linnea_1_0"
+			}
+		},
+
+		"mom_1_4" : 
+		{ 
+			"text": "Hi honey, I'm confused about the question? You're asking about my work? What about the warehouse? Love, Mom", 
+			"responses" : 
+			{
+				"i'm sorry, i'm confused" : "mom_1_2",
+				"do i work there too?" : "mom_1_5"
+			}
+		},
+
+		"mom_1_5" : 
+		{ 
+			"text": "Hi hun, Of course not. Listen, I can't answer those kinds of questions right now. OK? For now, please get in touch with Linnea. She keeps messaging me asking to speak with you and it's very frustrating. Love, Mom", 
+			"responses" : 
+			{
+				"sorry, mom. i'll talk to linnea" : "linnea_1_0"
+			}
+		},
+
+		"mom_2_0" : 
+		{ 
+			"text": "", 
+			"responses" : 
+			{
+				"mom, what did dad do?" : "mom_2_1"
+			}
+		},
+
+		"mom_2_1" : 
+		{ 
+			"text": "Hi love, Excuse me? Love, Mom", 
+			"responses" : 
+			{
+				"tell me what dad did to me" : "mom_2_2",
+				"never mind" : "mom_2_3"
+			}
+		},
+
+		"mom_2_2" : 
+		{ 
+			"text": "Hi honey, I'm not sure I understand what you mean. This is a hard question for me. I can't think of anything your father did that could have changed the beautiful person you are now. Not that he did anything in particular. My meaning is getting mixed up here. Let's talk later. Love, Mom", 
+			"responses" : 
+			{
+				"notification" :
+				{
+					"type" : "email",
+					"sender" : "Census Bureau",
+					"id" : "census_3_0"
+				}
+			}
+		},
+
+		"mom_2_3" : 
+		{ 
+			"text": "Hi honey, Are you sure about that? I'm worried. Love, Mom", 
+			"responses" : 
+			{
+				"you're lying to me" : "mom_2_4",
+				"i don't mean to be hurtful" : "mom_2_5"
+			}
+		},
+
+		"mom_2_4" : 
+		{ 
+			"text": "Dear Aster, I really don't know what you're talking about. Please calm down and talk to me later. Love, Mom", 
+			"responses" : 
+			{
+				"notification" :
+				{
+					"type" : "email",
+					"sender" : "Census Bureau",
+					"id" : "census_3_0"
+				}
+			}
+		},
+
+		"mom_2_5" : 
+		{ 
+			"text": "Hi love, That's OK, I'm just concerned. What's going on? Love, Mom", 
+			"responses" : 
+			{
+				"i think dad did something terrible" : "mom_2_2"
+			}
+		},
+
+		"mom_3_0" : 
+		{ 
+			"text": "Dear Aster, This is a difficult message for me to write. I don't understand very well myself what has happened, but I know from the way you speak to me that it is important to you. I want to tell you everything but I can only tell you what I know, which is very little. As you may or may not know by now, you have had two rounds of surgery in your very short life. The first surgery was particularly difficult on your body, as you were quite small then. But you insisted, so your father and I consented to the procedure. Your father worried the whole time about your capacity to make decisions. He worried about your desire to communicate with us. He believed you would cast us aside like you had cast aside so many gadgets once they lost their usefulness. So he installed his own scripts on your hardware before the procedure, while you were still unconscious. It was within his legal right as your father, I remind you. I cannot say what was contained inside the scripts. I do not understand much. I am trying to be as honest as I can be but I only know so very little. Please, I hope you will forgive him. I love you always. Love, Mom", 
+			"responses" : 
+			{
+				"notification" :
+				{
+					"type" : "message",
+					"sender" : "Hawthorne",
+					"id" : "hawthorne_3_0"
+				}
 			}
 		}
 	},
 
-	"mom_2_3" : 
-	{ 
-		"text": "Hi honey, Are you sure about that? I'm worried. Love, Mom", 
-		"responses" : 
+	"Hawthorne" : 
+	{
+		"hawthorne_1_0" : 
 		{
-			"you're lying to me" : "mom_2_4",
-			"i don't mean to be hurtful" : "mom_2_5"
-		}
-	},
-
-	"mom_2_4" : 
-	{ 
-		"text": "Dear Aster, I really don't know what you're talking about. Please calm down and talk to me later. Love, Mom", 
-		"responses" : 
-		{
-			"notification" :
+			"text" : "hey buddy! how's it going?//<span style=\"font-family:menlo;font-size:12px;\">&lt;ERR: PICTURE FAILED TO LOAD&gt;</span>",
+			"responses" :
 			{
-				"type" : "email",
-				"sender" : "Census Bureau",
-				"id" : "census_3_0"
+				"who is this?" : "hawthorne_1_1",
+				"sorry, i'm on a smartphone" : "hawthorne_1_2"
 			}
-		}
-	},
+		},
 
-	"mom_2_5" : 
-	{ 
-		"text": "Hi love, That's OK, I'm just concerned. What's going on? Love, Mom", 
-		"responses" : 
+		"hawthorne_1_1" : 
 		{
-			"i think dad did something terrible" : "mom_2_2"
-		}
-	},
-
-	"mom_3_0" : 
-	{ 
-		"text": "Dear Aster, This is a difficult message for me to write. I don't understand very well myself what has happened, but I know from the way you speak to me that it is important to you. I want to tell you everything but I can only tell you what I know, which is very little. As you may or may not know by now, you have had two rounds of surgery in your very short life. The first surgery was particularly difficult on your body, as you were quite small then. But you insisted, so your father and I consented to the procedure. Your father worried the whole time about your capacity to make decisions. He worried about your desire to communicate with us. He believed you would cast us aside like you had cast aside so many gadgets once they lost their usefulness. So he installed his own scripts on your hardware before the procedure, while you were still unconscious. It was within his legal right as your father, I remind you. I cannot say what was contained inside the scripts. I do not understand much. I am trying to be as honest as I can be but I only know so very little. Please, I hope you will forgive him. I love you always. Love, Mom", 
-		"responses" : 
-		{
-			"notification" :
+			"text" : "it's hawthorne, dude. did you lose your contacts or something? or did you already get a new device installed?? haha ;)",
+			"responses" :
 			{
-				"type" : "message",
-				"sender" : "Hawthorne",
-				"id" : "hawthorne_3_0"
+				"i'm on a smartphone now" : "hawthorne_1_2",
+				"i can't remember anything" : "hawthorne_1_3",
+				"it's a joke lol" : "hawthorne_1_6"
 			}
-		}
-	},
+		},
 
-	"hawthorne_1_0" : 
-	{
-		"text" : "hey buddy! how's it going?//<span style=\"font-family:menlo;font-size:12px;\">&lt;ERR: PICTURE FAILED TO LOAD&gt;</span>",
-		"responses" :
+		"hawthorne_1_2" : 
 		{
-			"who is this?" : "hawthorne_1_1",
-			"sorry, i'm on a smartphone" : "hawthorne_1_2"
-		}
-	},
-
-	"hawthorne_1_1" : 
-	{
-		"text" : "it's hawthorne, dude. did you lose your contacts or something? or did you already get a new device installed?? haha ;)",
-		"responses" :
-		{
-			"i'm on a smartphone now" : "hawthorne_1_2",
-			"i can't remember anything" : "hawthorne_1_3",
-			"it's a joke lol" : "hawthorne_1_6"
-		}
-	},
-
-	"hawthorne_1_2" : 
-	{
-		"text" : "wtf? seriously?? dude that's wild lol//sorry, not 'dude'. i forgot. my b//anyway i haven't seen a white kid with a phone in ages//...no offense haha//send me a pic, will ya?//jk ahaha they don't even support retinal cams!!",
-		"responses" :
-		{
-			"that's not very nice" : "hawthorne_1_8",
-			"haha yeah it's wild" : "hawthorne_1_4"
-		}
-	},
-
-	"hawthorne_1_3" : 
-	{
-		"text" : "what's that supposed to mean? what happened?//this is serious. i'm not joking//let me remind you that you're legally required to report any medical problems to me and the rest of your supervisors as soon as they occur",
-		"responses" :
-		{
-			"i'm just kidding" : "hawthorne_1_6",
-			"i'm not totally sure" : "hawthorne_1_5"
-		}
-	},
-
-	"hawthorne_1_4" : 
-	{
-		"text" : "but seriously, what happened? are your bio sensors ok?",
-		"responses" :
-		{
-			"some parts are out for repair" : "hawthorne_1_7",
-			"don't worry about it" : "hawthorne_1_8"
-		}
-	},
-
-	"hawthorne_1_5" : 
-	{
-		"text" : "some kind of weird flu or something? it might be interacting with your memory unit//well if that's the case then get yourself to a care provider stat//i'll talk to HR and get back to you as soon as i know whether we can get you paid leave//oops sorry about dude.'' just noticed i used it again... my b//<span style=\"font-family:menlo;font-size:12px;\">&lt;ERR: PICTURE FAILED TO LOAD&gt;</span>//i keep getting an error that says sommething about a phone OS, you know anything about that?",
-		"responses" :
-		{
-			"i'm testing new apps" : "hawthorne_1_9",
-			"don't worry about it" : "hawthorne_1_8"
-		}
-	},
-
-	"hawthorne_1_6" : 
-	{
-		"text" : "omg for real//...damn//you got me lol//sorry bout my blowup//sorry about 'dude,' too. totally slipped my mind//why -are- you on the phone tho?",
-		"responses" :
-		{
-			"i'm testing new apps" : "hawthorne_1_9",
-			"don't worry about it" : "hawthorne_1_8"
-		}
-	},
-
-	"hawthorne_1_7" : 
-	{
-		"text" : "'seem to be'?? lol o-k. just as long as those new ones are still kickin B-)//well i hope you get better soon bud. it won't really work having you around the office while you're still using that phone. nothing personal, it's just that it could creep out the rest of the staff, you know?//they might look like you're trying to organize the janitors lmao//anywayyy i'll talk to HR asap and get back to you as soon as i know whether we can get you paid leave, k?",
-		"responses" :
-		{
-			"okay" : "hawthorne_1_13"
-		}
-	},
-
-	"hawthorne_1_8" : 
-	{
-		"text" : "uhh ok lmao...//anyway i'll see you tomorrow? you coming in at all this week? i got some new assignments for you",
-		"responses" :
-		{
-			"i'll be there" : "hawthorne_1_13",
-			"i'll be out for the week" : "hawthorne_1_10"
-		}
-	},
-
-	"hawthorne_1_9" : 
-	{
-		"text" : "ohhh you're on the update drive team? that's great!//how's that project going? it sounds like a tough design task//i know from personal experience how hard it can be to get ppl still on smartphones to do practically anything//if anyone is up to the task it's you tho B-)",
-		"responses" :
-		{
-			"thanks, i appreciate it" : "hawthorne_1_11",
-			"what's wrong with smartphone users?" : "hawthorne_1_12"
-		}
-	},
-
-	"hawthorne_1_10" : 
-	{
-		"text" : "that's ok, for now. but don't make a habit of it//only because you're our star. but stars still have to come in so they can shine//;)//i'll see you next monday then?",
-		"responses" :
-		{
-			"for sure" : "hawthorne_1_13"
-		}
-	},
-
-	"hawthorne_1_11" : 
-	{
-		"text" : "anyway i'll see you tomorrow? you coming in at all this week? i got some new assignments for you",
-		"responses" :
-		{
-			"i'll be there" : "hawthorne_1_13",
-			"i'll be out for the week" : "hawthorne_1_10"
-		}
-	},
-
-	"hawthorne_1_12" : 
-	{
-		"text" : "well nothing really//they just tend not to be the brightest lasers in the box when it comes to tech, you know?//anyway you coming in to work this week? i have some assignments for you//it's cool if you're too busy with the update drive stuff but we could use you",
-		"responses" :
-		{
-			"i'll be there" : "hawthorne_1_13",
-			"i'll be out for the week" : "hawthorne_1_10"
-		}
-	},
-
-	"hawthorne_1_13" : 
-	{
-		"text" : "great. oh and also! remember to make sure your software is up to date today//wouldn't want the goons to start watching our every move lol",
-		"responses" :
-		{
-			"notification" :
+			"text" : "wtf? seriously?? dude that's wild lol//sorry, not 'dude'. i forgot. my b//anyway i haven't seen a white kid with a phone in ages//...no offense haha//send me a pic, will ya?//jk ahaha they don't even support retinal cams!!",
+			"responses" :
 			{
-				"type" : "email",
-				"sender" : "FixMyMentals\u00AE",
-				"id" : "repair_2_0"
+				"that's not very nice" : "hawthorne_1_8",
+				"haha yeah it's wild" : "hawthorne_1_4"
 			}
-		}
-	},
+		},
 
-	"hawthorne_2_0" : 
-	{
-		"text" : "hey bud! we're planning a big thing for this weekend, you want to come?//i figure i gotta keep you in the loop now that you're off the network and on your phone haha//it'd be nice to have you there. the rest of the chicks in the office are boring lmao//i can actually talk to you about how stuff works, and not just how it looks",
-		"responses" :
+		"hawthorne_1_3" : 
 		{
-			"i'll be there for sure" : "hawthorne_2_1",
-			"what is wrong with you?" : "hawthorne_2_2"
-		}
-	},
-
-	"hawthorne_2_1" : 
-	{
-		"text" : "awesome! good to hear//you up to speed on the new DCP update we charted out today?//it went out over the network so i figured you may not have seen it",
-		"responses" :
-		{
-			"DCP?" : "hawthorne_2_3",
-			"no, what'd you decide?" : "hawthorne_2_4"
-		}
-	},
-
-	"hawthorne_2_2" : 
-	{
-		"text" : "what's that supposed to mean?",
-		"responses" :
-		{
-			"it means you're messed up" : "hawthorne_2_5",
-			"i don't know" : "hawthorne_2_6"
-		}
-	},
-
-	"hawthorne_2_3" : 
-	{
-		"text" : "...?//like, literally your job?",
-		"responses" :
-		{
-			"what's my job?" : "hawthorne_2_7"
-		}
-	},
-
-	"hawthorne_2_4" : 
-	{
-		"text" : "i can't really say over an unencrypted connection//suffice it to say we're making huge moves re: the update drive data//HUGE moves//check the network when you're off of that phone thing lol",
-		"responses" :
-		{
-			"notification" :
+			"text" : "what's that supposed to mean? what happened?//this is serious. i'm not joking//let me remind you that you're legally required to report any medical problems to me and the rest of your supervisors as soon as they occur",
+			"responses" :
 			{
-				"type" : "message",
-				"sender" : "Linnea",
-				"id" : "linnea_3_0"
+				"i'm just kidding" : "hawthorne_1_6",
+				"i'm not totally sure" : "hawthorne_1_5"
 			}
-		}
-	},
+		},
 
-	"hawthorne_2_5" : 
-	{
-		"text" : "you better fucking watch it, kid//you think you can play with your boss like that?//i own you, aster. you might think you're big shit because we've got you working DCP, but that doesn't mean i can't replace your ass whenever i want//i'm watching you",
-		"responses" :
+		"hawthorne_1_4" : 
 		{
-			"notification" :
+			"text" : "but seriously, what happened? are your bio sensors ok?",
+			"responses" :
 			{
-				"type" : "message",
-				"sender" : "Linnea",
-				"id" : "linnea_3_0"
+				"some parts are out for repair" : "hawthorne_1_7",
+				"don't worry about it" : "hawthorne_1_8"
 			}
-		}
-	},
+		},
 
-	"hawthorne_2_6" : 
-	{
-		"text" : "???//i really don't know what's up with you, aster, but this kind of behavior is unacceptable//i'm keeping an eye on you from now on",
-		"responses" :
+		"hawthorne_1_5" : 
 		{
-			"notification" :
+			"text" : "some kind of weird flu or something? it might be interacting with your memory unit//well if that's the case then get yourself to a care provider stat//i'll talk to HR and get back to you as soon as i know whether we can get you paid leave//oops sorry about dude.'' just noticed i used it again... my b//<span style=\"font-family:menlo;font-size:12px;\">&lt;ERR: PICTURE FAILED TO LOAD&gt;</span>//i keep getting an error that says sommething about a phone OS, you know anything about that?",
+			"responses" :
 			{
-				"type" : "message",
-				"sender" : "Linnea",
-				"id" : "linnea_3_0"
+				"i'm testing new apps" : "hawthorne_1_9",
+				"don't worry about it" : "hawthorne_1_8"
 			}
-		}
-	},
+		},
 
-	"hawthorne_2_7" : 
-	{
-		"text" : "DCP IS YOUR JOB, ASTER//what is up with you man, seriously//this shit is getting ridiculous",
-		"responses" :
+		"hawthorne_1_6" : 
 		{
-			"notification" :
+			"text" : "omg for real//...damn//you got me lol//sorry bout my blowup//sorry about 'dude,' too. totally slipped my mind//why -are- you on the phone tho?",
+			"responses" :
 			{
-				"type" : "message",
-				"sender" : "Linnea",
-				"id" : "linnea_3_0"
+				"i'm testing new apps" : "hawthorne_1_9",
+				"don't worry about it" : "hawthorne_1_8"
 			}
-		}
-	},
+		},
 
-	"hawthorne_3_0" : 
-	{
-		"text" : "aster, come see me in my office at DataDouble as soon as you can. it's urgent. bring whatever drives you have with DCP materials on them. i can't reply to any messages until i see you here.",
-		"responses" :
+		"hawthorne_1_7" : 
 		{
-			"notification" :
+			"text" : "'seem to be'?? lol o-k. just as long as those new ones are still kickin B-)//well i hope you get better soon bud. it won't really work having you around the office while you're still using that phone. nothing personal, it's just that it could creep out the rest of the staff, you know?//they might look like you're trying to organize the janitors lmao//anywayyy i'll talk to HR asap and get back to you as soon as i know whether we can get you paid leave, k?",
+			"responses" :
 			{
-				"type" : "message",
-				"sender" : "Linnea",
-				"id" : "linnea_4_0"
+				"okay" : "hawthorne_1_13"
+			}
+		},
+
+		"hawthorne_1_8" : 
+		{
+			"text" : "uhh ok lmao...//anyway i'll see you tomorrow? you coming in at all this week? i got some new assignments for you",
+			"responses" :
+			{
+				"i'll be there" : "hawthorne_1_13",
+				"i'll be out for the week" : "hawthorne_1_10"
+			}
+		},
+
+		"hawthorne_1_9" : 
+		{
+			"text" : "ohhh you're on the update drive team? that's great!//how's that project going? it sounds like a tough design task//i know from personal experience how hard it can be to get ppl still on smartphones to do practically anything//if anyone is up to the task it's you tho B-)",
+			"responses" :
+			{
+				"thanks, i appreciate it" : "hawthorne_1_11",
+				"what's wrong with smartphone users?" : "hawthorne_1_12"
+			}
+		},
+
+		"hawthorne_1_10" : 
+		{
+			"text" : "that's ok, for now. but don't make a habit of it//only because you're our star. but stars still have to come in so they can shine//;)//i'll see you next monday then?",
+			"responses" :
+			{
+				"for sure" : "hawthorne_1_13"
+			}
+		},
+
+		"hawthorne_1_11" : 
+		{
+			"text" : "anyway i'll see you tomorrow? you coming in at all this week? i got some new assignments for you",
+			"responses" :
+			{
+				"i'll be there" : "hawthorne_1_13",
+				"i'll be out for the week" : "hawthorne_1_10"
+			}
+		},
+
+		"hawthorne_1_12" : 
+		{
+			"text" : "well nothing really//they just tend not to be the brightest lasers in the box when it comes to tech, you know?//anyway you coming in to work this week? i have some assignments for you//it's cool if you're too busy with the update drive stuff but we could use you",
+			"responses" :
+			{
+				"i'll be there" : "hawthorne_1_13",
+				"i'll be out for the week" : "hawthorne_1_10"
+			}
+		},
+
+		"hawthorne_1_13" : 
+		{
+			"text" : "great. oh and also! remember to make sure your software is up to date today//wouldn't want the goons to start watching our every move lol",
+			"responses" :
+			{
+				"notification" :
+				{
+					"type" : "email",
+					"sender" : "FixMyMentals\u00AE",
+					"id" : "repair_2_0"
+				}
+			}
+		},
+
+		"hawthorne_2_0" : 
+		{
+			"text" : "hey bud! we're planning a big thing for this weekend, you want to come?//i figure i gotta keep you in the loop now that you're off the network and on your phone haha//it'd be nice to have you there. the rest of the chicks in the office are boring lmao//i can actually talk to you about how stuff works, and not just how it looks",
+			"responses" :
+			{
+				"i'll be there for sure" : "hawthorne_2_1",
+				"what is wrong with you?" : "hawthorne_2_2"
+			}
+		},
+
+		"hawthorne_2_1" : 
+		{
+			"text" : "awesome! good to hear//you up to speed on the new DCP update we charted out today?//it went out over the network so i figured you may not have seen it",
+			"responses" :
+			{
+				"DCP?" : "hawthorne_2_3",
+				"no, what'd you decide?" : "hawthorne_2_4"
+			}
+		},
+
+		"hawthorne_2_2" : 
+		{
+			"text" : "what's that supposed to mean?",
+			"responses" :
+			{
+				"it means you're messed up" : "hawthorne_2_5",
+				"i don't know" : "hawthorne_2_6"
+			}
+		},
+
+		"hawthorne_2_3" : 
+		{
+			"text" : "...?//like, literally your job?",
+			"responses" :
+			{
+				"what's my job?" : "hawthorne_2_7"
+			}
+		},
+
+		"hawthorne_2_4" : 
+		{
+			"text" : "i can't really say over an unencrypted connection//suffice it to say we're making huge moves re: the update drive data//HUGE moves//check the network when you're off of that phone thing lol",
+			"responses" :
+			{
+				"notification" :
+				{
+					"type" : "message",
+					"sender" : "Linnea",
+					"id" : "linnea_3_0"
+				}
+			}
+		},
+
+		"hawthorne_2_5" : 
+		{
+			"text" : "you better fucking watch it, kid//you think you can play with your boss like that?//i own you, aster. you might think you're big shit because we've got you working DCP, but that doesn't mean i can't replace your ass whenever i want//i'm watching you",
+			"responses" :
+			{
+				"notification" :
+				{
+					"type" : "message",
+					"sender" : "Linnea",
+					"id" : "linnea_3_0"
+				}
+			}
+		},
+
+		"hawthorne_2_6" : 
+		{
+			"text" : "???//i really don't know what's up with you, aster, but this kind of behavior is unacceptable//i'm keeping an eye on you from now on",
+			"responses" :
+			{
+				"notification" :
+				{
+					"type" : "message",
+					"sender" : "Linnea",
+					"id" : "linnea_3_0"
+				}
+			}
+		},
+
+		"hawthorne_2_7" : 
+		{
+			"text" : "DCP IS YOUR JOB, ASTER//what is up with you man, seriously//this shit is getting ridiculous",
+			"responses" :
+			{
+				"notification" :
+				{
+					"type" : "message",
+					"sender" : "Linnea",
+					"id" : "linnea_3_0"
+				}
+			}
+		},
+
+		"hawthorne_3_0" : 
+		{
+			"text" : "aster, come see me in my office at DataDouble as soon as you can. it's urgent. bring whatever drives you have with DCP materials on them. i can't reply to any messages until i see you here.",
+			"responses" :
+			{
+				"notification" :
+				{
+					"type" : "message",
+					"sender" : "Linnea",
+					"id" : "linnea_4_0"
+				}
 			}
 		}
 	}
