@@ -26,11 +26,6 @@ $(document).ready(function() {
 
 	$('<div id="glitchdialog" data-overlay-theme="b" data-theme="b" data-role="popup" data-dismissible="false" class="ui-corner-all"><div data-role="header" class="glitch ui-corner-top"><h1>ƐʹŗªʁíŎʆĄǡĲ̌̎Ɍʢ˜¼ư̓Ŵ̾ʫɵŅɛ</h1></div><div id="glitchtext" role="main" class="ui-corner-bottom ui-content">'+glitchText+'</div><a id="glitchbtn" href="#" class="glitch ui-btn ui-corner-all ui-shadow ui-btn-inline" data-rel="back">Œ„I€ªwˆƒñ</a></div></div>').appendTo('#mail_options');
 
-	$('#glitchtext').css({
-		'white-space':'normal',
-		'word-wrap':'break-word'
-	});
-
 	$('#mail_compose').click(function(){
 		$('#glitchdialog')
 		.children('.glitch')
@@ -82,10 +77,10 @@ function receiveMail(mailID)
 		var newMailListItemHTML = '<li id="'+threadID+'" data-icon="false"><a href="#mail_view" data-transition="slide" class="unread-mail"><h1>'+mailSender+'</h1><p class="mail_subject">'+mailSubject+'</p><p class="mail_textpreview">'+$(mailText).eq(0).text()+'    '+$(mailText).eq(2).text()+'</p><p class="mail_time ui-li-aside">'+mailTime+'</p></a></li>';
 
 		$(newMailListItemHTML)
-		.hide()
-		.appendTo('#mail_list')
-		.slideDown()
-		.click(setupMailScreen($(this), mailSender, threadID));
+			.hide()
+			.appendTo('#mail_list')
+			.slideDown()
+			.click(setupMailScreen(mailSender, mailSubject, threadID));
 
 		if (thisPageID == 'mail_nav') {
 			$('#mail_list').listview('refresh');
@@ -93,50 +88,28 @@ function receiveMail(mailID)
 	}
 
 	else {
-		$('#'+threadID)
-		.children('a')
+		$('#'+threadID+' a')
 		.addClass('unread-mail')
-		.off('click')
-		.click(function(){
-			$(this).removeClass('unread-mail').children('h1').text(mailSender);
-			$('#mail_title h2').html(mailSender);
-			$('#mail_content').html(mailByThread[threadID]);
-			$('div.email:not(:first-child) h2').each(function(){
-				$(this).text('RE: '+$(this).text());
-			});
-			$('#mail_response_navbar').remove();
-			$('<div id="mail_response_navbar" data-role="navbar"><ul id="mail_response_options"></ul></div>').prependTo('#mail_view_footer');
-
-			// responses
-			if (mailResponses.length==0) {
-				$('#mail_response_options').html('<li><a><span style="color:gray">Error: No responses could be generated</span></a></li>');
-			} else {
-				for (var i = 0; i < Object.keys(mailResponses).length; i++) {
-					var response = Object.keys(mailResponses)[i];
-					$('#mail_response_options').html('');
-					$('<li><a><span id="#autoresponse-'+responseNum.toString()+'">'+response+'</span></a></li>')
-						.appendTo('#mail_response_options')
-						.click(onMailResponseClick(response));
-				}
-			}
-
-			$('#mail_view_footer').trigger('create');
-		})
 		.children('h1')
 		.text(mailSender+'   ('+($(mailByThread[threadID]).length-1)+')');
 	}
-
-	if ((thisPageID != 'mail_nav') && (thisPageID != 'mail_view') && (notificationsPossible))
-	{
-		getNotification('Mail', 'New mail from '+mailSender, mailTime, true);
-	}
-
-	$('div.email:not(:first-child) h2').text('Re');
 }
 
-function setupMailScreen(element, sender, threadID){
+function sendMail (threadID, mailSubject, response){
+
+	var mailID = mailActiveResponses[threadID][response];
+	var newMailHTML = '<div class="email"><h2>'+mailSubject+'</h2><p>'+response+'</p></div>';
+
+	mailByThread[threadID] = newMailHTML.concat(mailByThread[threadID]);
+
+	scrollToTop();
+	
+	receiveMail(mailID);
+}
+
+function setupMailScreen(sender, mailSubject, threadID){
 	return function(){
-		element.removeClass('unread-mail');
+		$('#'+threadID+' a').removeClass('unread-mail');
 		$('#mail_title h2').html(sender);
 		$('#mail_content').html(mailByThread[threadID]);
 
@@ -150,15 +123,21 @@ function setupMailScreen(element, sender, threadID){
 				var response = Object.keys(mailActiveResponses[threadID])[i];
 				$('<li><a><span>'+response+'</span></a></li>')
 					.appendTo('#mail_response_options')
-					.click(onMailResponseClick(response));
+					.click(onMailResponseClick(sender, threadID, mailSubject, response));
 			}
 		}
 		$('#mail_view_footer').trigger('create');
+
+		$('div.email:not(:last-child) h2').each(function(){
+			$(this).text('RE: '+$(this).text());
+		});
 	}
 }
 
-function onMailResponseClick(response){
+function onMailResponseClick(sender, threadID, mailSubject, response){
 	return function(){
-		
+		sendMail(threadID, mailSubject, response);
+		$('#mail_response_options').html('');
+		setupMailScreen(sender, mailSubject, threadID)();
 	}
 }

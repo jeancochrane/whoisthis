@@ -4,7 +4,7 @@ msgsData = (function () {
     $.ajax({
         'async': false,
         'global': false,
-        'url': 'json/msg.json',
+        'url': 'json/story.json',
         'dataType': "json",
         'success': function (data) {
             json = data;
@@ -13,7 +13,7 @@ msgsData = (function () {
     return json;
 })();
 
-contactsArray = Object.keys(msgsData);
+contactsArray = ['Mom','Hawthorne','Linnea'];
 //contactsArray=contactsArray.sort(); //alphabetize
 
 allMsgs = {};
@@ -27,7 +27,6 @@ for(var i=0; i < contactsArray.length; i++) {
 	activeResponses[contactsArray[i]] = [];
 	counterArray[contactsArray[i]] = 0;
 }
-
 
 // RUNS WHEN THE DOM LOADS
 $(document).ready(function() {
@@ -59,10 +58,6 @@ $(document).ready(function() {
 			$('#msg_list').listview('refresh');
 		}
 	}); 
-
-	$('#msg_receive').click(function(){
-		receiveMsg($('#msg_header h2').text());
-	});
 });
 
 
@@ -93,7 +88,7 @@ function printMsg(sender, msgArray, msgResponses) {
 	}
 
 	var newMsgHtml = '<li class="response"><div class="responsetext">'+msgText+'</div></li>'; // define new message in html form
-	
+
 	allMsgs[sender] = allMsgs[sender].concat(newMsgHtml); // update allMsgs array to include new message
 
 	lastMsgs[sender] = $(allMsgs[sender]).children().last().text(); // update lastMsgs array to include new message text

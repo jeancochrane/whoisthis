@@ -123,6 +123,10 @@ function scrollToBottom()
     $(document).scrollTop(10000000);
 }
 
+function scrollToTop(){
+    $(document).scrollTop(-10000000);
+}
+
 (function ($) { //allows us to use "show" and "hide" as events.
       $.each(['show', 'hide'], function (i, ev) {
         var el = $.fn[ev];

@@ -122,6 +122,11 @@ div.email:last-child {
 	color: gray;
 }
 
+#glitchtext {
+	white-space : normal;
+	word-wrap : break-word;
+}
+
 #home.ui-page {
    background: linear-gradient(rgb(149,243,255), rgb(236,138,255));
 }
@@ -176,6 +181,12 @@ svg a:hover {
 }
 
 div.email:not(:first-child) {
+	opacity:0.8;
+	margin-left: 5%;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-left-color: gray;
+	padding-left: 2.5%;
 }
 
 #mail_response_navbar ul a {
