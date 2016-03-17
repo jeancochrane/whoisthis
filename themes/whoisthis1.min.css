@@ -24,7 +24,7 @@ button,
 .ui-btn {
 	font-size: 1em;
 	line-height: 1.3;
-	       font-family: avenir /*{global-font-family}*/;
+	       font-family: avenir /*{global-font-family}*/, helvetica, sans serif;
 }
 legend,
 .ui-input-text input,

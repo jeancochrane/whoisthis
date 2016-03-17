@@ -17,7 +17,7 @@
 .lastmsg {
 	color: #aaaaaa;
 	display: inline;
-	font-family: helvetica, arial, sans-serif;
+	font-family: avenir, helvetica, arial, sans-serif;
 	font-weight: lighter;
 }
 
@@ -199,6 +199,9 @@ div.email:not(:first-child) {
 #mail_response_navbar ul a {
 	white-space: normal;
 	height: 40px;
-	line-height: 40px;
+	line-height: 20px;
 }
 
+img {
+	max-width: 100%;
+}
