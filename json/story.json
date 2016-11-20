@@ -1067,7 +1067,12 @@
 			"text": "Hi hun, Of course not. Listen, I can't answer those kinds of questions right now. OK? For now, please get in touch with Linnea. She keeps messaging me asking to speak with you and it's very frustrating. Love, Mom", 
 			"responses" : 
 			{
-				"sorry, mom. i'll talk to linnea" : "linnea_1_0"
+				"notification" : 
+				{
+					"type" : "message",
+					"sender" : "Linnea",
+					"id" : "linnea_1_0"
+				}
 			}
 		},
 
